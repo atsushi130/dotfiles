@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.slack.atsushi</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>2204D912-EA98-494A-BB9C-386FD7FB4949</key>
+		<array/>
+		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2204D912-EA98-494A-BB9C-386FD7FB4949</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>atsushi</string>
+	<key>description</key>
+	<string>Open slack team</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Slack</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>slack</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Slack</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [ $1 = "lost" ]; then
+	open -a /Applications/Vivaldi.app https://infinityrice.slack.com/
+elif [ $1 = "usme" ]; then
+	open -a /Applications/Vivaldi.app https://usmeteam.slack.com/
+elif [ $1 = "waffy" ]; then
+	open -a /Applications/Vivaldi.app https://waffy.slack.com/
+elif [ $1 = "30manyen" ]; then
+	open -a /Applications/Vivaldi.app https://30manyen.slack.com/
+elif [ $1 = "atsushi" ]; then
+	open -a /Applications/Vivaldi.app https://atsushi130.slack.com/
+elif [ $1 = "fucode" ]; then
+	open -a /Applications/Vivaldi.app https://fucode.slack.com/
+elif [ $1 = "disaster" ]; then
+	open -a /Applications/Vivaldi.app https://disaster-hack.slack.com/
+elif [ $1 = "vapor" ]; then
+	open -a /Applications/Vivaldi.app https://qutheory.slack.com/
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2204D912-EA98-494A-BB9C-386FD7FB4949</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Keywords are one of Alfred's most commonly used and most useful ways of launching actions. Set a keyword and connect it to the action(s) you want to perform.
+
+Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
+	<key>uidata</key>
+	<dict>
+		<key>2204D912-EA98-494A-BB9C-386FD7FB4949</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>note</key>
+			<string>1. Add a keyword object by right-clicking the canvas and choosing Inputs &gt; Keyword. Set the keyword and title to show it in Alfred's results.</string>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

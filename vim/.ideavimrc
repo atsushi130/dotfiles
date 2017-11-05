@@ -1,0 +1,47 @@
+imap <C-j> <esc>
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+
+" setting scroll speed to fast
+set lazyredraw
+
+" highlighted current row
+set cursorline
+
+" display number of row
+set ruler
+
+" [Control + j] -> Normal mode
+imap <C-j> <esc>
+
+" [Control + a] and [Control + e] -> head if line and end of line
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^i
+noremap <C-e> <Esc>$
+noremap <C-a> <Esc>^
+vnoremap <C-e> $
+vnoremap <C-a> ^
+
+" [Control + c] -> copy (when Visual mode)
+vnoremap <C-c> y
+
+" remove word when insert mode
+inoremap <C-x> <Esc>xi
+
+" [Control + s] -> save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+" [Control + q] -> quit
+nnoremap <C-q> :q<CR>
+inoremap <C-q> <Esc>:q<CR>
+
+" [Shift + o] -> [Control + o]
+inoremap <C-O> <Esc><S-o>
+inoremap <C-o> <Esc>o
+
+" [Control + d] -> delete line
+inoremap <C-d> <Esc>ld$a
+nnoremap <C-d> <Esc>d$

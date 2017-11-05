@@ -1,0 +1,267 @@
+
+alias ..="cd ../"
+alias ....="cd ../../"
+alias ......="cd ../../../"
+alias svim="sudo vim -u ~/.vimrc"
+alias home="cd ~/"
+
+alias vimrc="vim ~/.vimrc"
+alias dein="vim ~/.vim/dein/dein.toml"
+alias xvimrc="vim ~/.xvimrc"
+alias ideavimrc="vim ~/.ideavimrc"
+alias zshrc="vim ~/.zshrc"
+alias aliasrc="vim ~/.aliasrc"
+alias tmux-conf="vim ~/.tmux.conf"
+alias hyper="vim ~/.hyper.js"
+alias program="cd ~/program"
+alias realm="~/.realm/start-object-server.command"
+alias gtop="~/.gtop/bin/gtop"
+# alias gtop="(cd ~/.gtop/bin/gtop && npm start)"
+
+vim_version=`vim --version | head -1 | sed "s/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\2/"`
+alias less="/usr/share/vim/vim${vim_version}/macros/less.sh"
+
+# gitignore
+function test_ignoregen() {
+    languages="$(IFS=,; echo "${*[*]}")"
+    echo -e "`curl -L -s https://www.gitignore.io/api/$languages`" > .gitignore
+}
+
+# pet alias
+function prev() {
+  PREV=$(fc -lrn | head -n 1)
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N pet-select
+bindkey '^j' pet-select
+
+# kill the process of tmux
+alias tmux-kill="pgrep -f 'tmux' | xargs kill"
+
+alias dotopen="defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder"
+alias dotclose="defaults delete com.apple.finder AppleShowAllFiles && killall Finder"
+
+# brewfile
+brewfile() {
+
+    # non argments. Display the simplicity manual.
+    if [ $# = 0 ]; then
+        echo "Usage: brewfile [commands]"
+        echo "Commands:"
+        echo "       init     Generate Brewfile."
+        return
+    fi
+
+    if [ $1 = 'init' ]; then
+        brew bundle dump
+    fi
+}
+
+# rm-cache
+rm-cache() {
+
+    # non argments. Display the simplicity manual.
+    if [ $# = 0 ]; then
+        echo "Usage: rmc [filepath | filename]"
+        echo "Commands:"
+        echo "       ls       Display the cache list of deleted files."
+        echo "       restore  Restore the cache file based on the Cache ID."
+        echo "       clear    Clear all caches."
+        return
+    fi
+
+    # Display the cache list of deleted files.
+    if [ $1 = 'ls' ]; then
+        # exist file and file size is not zero.
+        if [ -s ~/.rmcache_history ]; then
+            echo 'Cache ID                             Date             File Name'
+            cat ~/.rmcache_history
+        else
+            touch ~/.rmcache_history
+        fi
+        return
+
+    # Restore the cache file based on the Cache ID.
+    elif [ $1 = 'restore' ]; then
+        cat ~/.rmcache_history | awk '{ if ($1 == "'$2'") print "mv","-f","~/.Trash/"$4,"./" }' | sh
+        cat ~/.rmcache_history | awk '{ if ($1 == "'$2'") print NR }' | xargs -Irow echo "sed -ie '"row"d' ~/.rmcache_history" | sh
+        return
+
+    # Clear all caches.
+    elif [ $1 = 'clear' ]; then
+        cat ~/.rmcache_history | awk '{ print "rm","-rf","~/.Trash/"$4 }' | sh
+        cat ~/.rmcache_history | awk '{ print NR }' | xargs -Irow echo "sed -ie '"row"d' ~/.rmcache_history" | sh
+        return
+    fi
+
+    # Rmove and file cache.
+    if [ -e ~/.Trash ]; then
+
+        # Check the existance of the file or directory.
+        if [ ! -e $1 ]; then
+            # Not exist.
+            echo 'File not exist.'
+            return
+        fi
+
+        cp -rf $1 ~/.Trash/$(basename $1)
+        touch ~/.rmcache_history
+        echo `uuidgen` $(date '+%Y-%m-%e %H:%M') $(basename $1) >> ~/.rmcache_history
+        rm -rf $1
+    else
+        # does not exist Trash directory.
+        mkdir ~/.Trash
+        rm-cache $1
+    fi
+}
+
+alias rmc="rm-cache"
+
+# display IP list of processing docker container
+docker-ls() {
+
+	if [ $# != 0 ]; then
+		if [ $1 = "ip" ]; then
+			docker ps | awk 'NR>1&&$0=$1' | xargs -n 1 docker inspect -f "{{.Name}} {{.NetworkSettings.IPAddress }}"
+		else
+			echo "option "$1" not found."
+		fi
+	else
+		echo "Usage: docker-ls [OPTION]"
+	fi
+}
+
+# launch Vivaldi
+alias Vivaldi="open -a /Applications/Vivaldi.app"
+vivaldi() {
+	local str opt
+	. ~/.dict/url.dict
+
+	count=1
+	for service in $services; do
+		if [ $1 = $service ]; then
+			Vivaldi $urls[$count]
+			return
+		fi
+		count=$(($count + 1))
+	done
+
+	if [ $1 = "-s" ]; then
+		if [ $# != 0 ]; then
+			local connect=false
+			for i in $*; do
+				if [ $connect = true ]; then
+					# concat search word using + when str is not empty
+					str="$str${str:++}$i"
+				fi
+				connect=true
+			done
+			opt="search?num=100"
+			opt="${opt}&q=${str}"
+		fi
+		Vivaldi http://www.google.co.jp/$opt
+
+	elif [ $1 = "-f" ]; then
+		Vivaldi $2
+	elif [ $1 = "-u" ]; then
+		Vivaldi $2
+	else
+		echo "option "$1" not found."
+    fi
+}
+
+# launch Google Chrome
+alias Google="open -a /Applications/Google\ Chrome.app"
+google() {
+ 	local str opt
+	. ~/.dict/url.dict
+
+	count=1
+	for service in $services; do
+		if [ $1 = $service ]; then
+			Google $urls[$count]
+			return
+		fi
+		count=$(($count + 1))
+	done
+
+	if [ $1 = "-s" ]; then
+		if [ $# != 0 ]; then
+			local connect=false
+			for i in $*; do
+				if [ $connect = true ]; then
+					# concat search word using + when str is not empty
+					str="$str${str:++}$i"
+				fi
+				connect=true
+			done
+			opt="webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#"
+			opt="${opt}&q=${str}"
+		fi
+		Google https://www.google.co.jp/$opt
+
+	elif [ $1 = "-f" ]; then
+		Google $2
+	elif [ $1 = "-u" ]; then
+		Google $2
+	else
+		echo "option "$1" not found."
+	fi
+}
+
+asana() {
+
+    if [ $1 = "-tags" ]; then
+
+    fi
+    local mtg="266647376591533"
+    local implement="266647376591534"
+    local other="266647376591535"
+    local operation="266647376591536"
+
+    curl -H "Authorization: Bearer 0/b99bf7efc19c8de26a5cc091b1e86ff5" https://app.asana.com/api/1.0/tasks \
+    -d "workspace=128462671696238" \
+    -d "projects=266598637059794" \
+    -d "name=`echo $1`" \
+    -d "due_on=`date '+%Y-%m-%d'`" \
+    -d "tags=${mtg},${implement},${other},${operation}" \
+    -d "assignee=128457654137255"
+}
+
+yomikata() {
+	Vivaldi http://yomikata.org/word/$1
+}
+
+# launch screensaver
+alias lock="open -a /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app"
+
+# launch Firefox
+alias firefox="open -a /Applications/Firefox.app"
+
+# launch Chrome
+alias chrome="open -a /Applications/Chromes.app"
+
+# launc hSafari
+alias safari="open -a /Applications/Safari.app"
+
+# launch xcode
+alias xcode="open -a /Applications/Xcode.app"
+
+# auto ls when cd
+function cd() {
+    builtin cd $@ && ls;
+}
+
+# change maked directory when mkdir
+# ban recursion method call setting builtin
+builtin alias mkdir="mkdir+cd"
+function mkdir+cd() {
+	#ban recursion method call
+	command mkdir $1 && cd $1 && ls;
+}

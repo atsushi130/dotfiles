@@ -1,0 +1,12 @@
+[user]
+	name = atmiyake
+	email = atmiyake@yahoo-corp.jp
+[core]
+	excludesfile = /Users/atmiyake/.gitignore
+	editor = vim -c \"set fenc=utf-8\"
+	quotepath = false
+	filemode = false
+[alias]
+    tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[merge]
+	ff = false

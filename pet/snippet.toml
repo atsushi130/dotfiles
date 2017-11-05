@@ -1,0 +1,49 @@
+[[snippets]]
+  description = "共通行を抽出"
+  command = "grep -x -i -f [file1] [file2]"
+  output = ""
+
+[[snippets]]
+  description = "yarn で package.json 生成"
+  command = "yarn init"
+  output = ""
+
+[[snippets]]
+  description = "typings.json 生成"
+  command = "typings init"
+  output = ""
+
+[[snippets]]
+  description = "tsconfig.json 生成"
+  command = "tsc --init"
+  output = ""
+
+[[snippets]]
+  description = "特定の IP アドレスからのアクセスを抽出"
+  command = "grep \"^[IP]\" [file]"
+  output = ""
+
+[[snippets]]
+  description = "[vim コマンド] vim で文字コードを変換して表示"
+  command = ":e ++enc=[utf-8|sjis]"
+  output = ""
+
+[[snippets]]
+  description = "インストールされたアプリケーションからカレントディレクトリに Brewfile を生成"
+  command = "brew bundle dump"
+  output = ""
+
+[[snippets]]
+  description = "Swift Package Manager で 新規プロジェクトを作成"
+  command = "swift package init --type [empty|library|system-module|executable]"
+  output = ""
+
+[[snippets]]
+  description = "Xcode プロジェクトを作成"
+  command = "swift package generate-xcodeproj"
+  output = ""
+
+[[snippets]]
+  description = "mysqldump で特定のテーブル定義を抽出"
+  command = "mysqldump -u [username] -p -h [hostname] [dbname] [tablename] > [filepath]"
+  output = ""

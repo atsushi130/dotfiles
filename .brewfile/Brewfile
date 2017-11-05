@@ -1,0 +1,129 @@
+
+# tap repositories and their packages
+
+tap argon/mas
+brew mas
+
+tap caskroom/cask
+cask alcatraz
+cask font-fira-code
+cask intellij-idea
+cask webstorm
+cask phpstorm
+cask pycharm
+cask appcode
+cask datagrip
+cask clion
+cask hyper
+cask opera-neon
+cask clipy
+cask visual-studio-code
+cask swiftybeaver
+cask realm-browser
+cask karabiner
+cask vivaldi
+cask haskell-platform
+
+tap caskroom/fonts
+
+tap cloudfoundry/tap
+brew cf-cli
+
+tap homebrew/binary
+
+tap homebrew/boneyard
+
+tap homebrew/bundle
+
+tap homebrew/core
+brew node
+brew sqlite
+brew typesafe-activator
+brew emojify
+brew cairo
+brew libtiff
+brew harfbuzz
+brew graphviz
+brew xz
+brew the_platinum_searcher
+brew webp
+brew ansible
+brew ruby-build
+brew openssl@1.1
+brew mysql
+brew gdbm
+brew perl
+brew readline
+brew pcre
+brew gobject-introspection
+brew oniguruma
+brew carthage
+brew lua
+brew wget
+brew gettext
+brew fontconfig
+brew fontforge
+brew tmux
+brew python3
+brew sshrc
+brew libpng
+brew ctags
+brew fzf
+brew file-formula
+brew glib
+brew freetype
+brew python
+brew jq
+brew graphite2
+brew the_silver_searcher
+brew swiftlint
+brew libtool
+brew jpeg
+brew libevent
+brew libffi
+brew ninja
+brew pango
+brew ruby
+brew libyaml
+brew rbenv-gemset
+brew scala
+brew openssl
+brew yarn
+brew icu4c
+brew reattach-to-user-namespace
+brew gd
+brew hiredis
+brew libmagic
+brew pixman
+brew autoconf
+brew rbenv
+brew libuv
+brew pkg-config
+brew ghc
+brew cabal-install
+
+tap homebrew/dupes
+
+tap homebrew/versions
+
+tap kylef/formulae
+brew swiftenv
+
+tap rcmdnk/file
+brew brew-file
+
+tap sanemat/font
+
+tap vapor/tap
+brew ctls
+brew vapor
+
+# App Store applications
+appstore 682658836 GarageBand (10.1.2)
+appstore 408981434 iMovie (10.1.2)
+appstore 409183694 Keynote (6.6.2)
+appstore 409203825 Numbers (3.6.2)
+appstore 409201541 Pages (5.6.2)
+appstore 844918735 PicGIF Lite (2.0.8)
+appstore 1191209926 Vaunt (1.2)
+appstore 497799835 Xcode (8.3.3)

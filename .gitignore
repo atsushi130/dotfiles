@@ -1,0 +1,5 @@
+.idea
+tags
+.DS_Store
+*.swp
+alfred/Alfred.alfredpreferences/preferences/features/websearch/prefs.plist

@@ -1,0 +1,43 @@
+root = true
+
+[*]
+# インデントスタイル [space | tab]
+indent_style = space
+
+# インデントサイズ
+indent_size  = 4
+
+# 最終行
+end_of_line  = lf
+
+# 文字コード
+charset      = utf-8
+
+# 行末のスペース
+trim_trailing_whitespace = true
+
+# 最終行の空行追加
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.swift]
+
+[*.rs]
+
+[*.ml]
+
+[*.scala]
+indent_size = 2
+
+[*.kt]
+
+[*.hs]
+
+[*.{scss, css}]
+indent_size = 2
+
+[*.java]
+
+[*.cr]

@@ -1,0 +1,228 @@
+# プラグインマネージャ
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# 補完
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+# 補完
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+on_i = 1
+## ctermfg=文字色 ctermbg=背景色
+## Pmenu=ノーマル PmenuSel 選択時 PmenuSbar=ステータスバー
+## 補完自動選択
+## シンタックスをキャッシュするときの最小文字長を3に指定
+## 補完候補の数
+## autocloseで片方のカッコを削除しても対のカッコが削除されなくなる
+hook_add = '''
+  let g:acp_enableAtStartup = 0
+  let g:neocomplcache_enable_at_startup = 1
+  let g:neocomplcache_enable_smart_case = 1
+  let g:neocomplcache_enable_smart_case = 1
+  let g:neocomplcache_min_syntax_length = 1
+  let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+  let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : ''
+    \ }
+  inoremap <expr><C-g>     neocomplcache#undo_completion()
+  inoremap <expr><C-l>     neocomplcache#complete_common_string()
+  inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+  if !exists('g:neocomplcache_omni_functions')
+    let g:neocomplcache_omni_functions = {}
+  endif
+  autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+  let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
+  hi Pmenu ctermfg=0 ctermbg=231
+  hi PmenuSel ctermbg=25
+  hi PMenuSbar ctermbg=235
+  hi PmenuThumb ctermfg=0 ctermbg=231
+  let g:neocomplcache_enable_auto_select = 1
+  let g:neocomplcache_min_syntax_length = 3
+  let g:neocomplcache_max_list = 5
+  inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+  inoremap <expr><C-c>  neocomplcache#close_popup()
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+hook_add = '''
+  inoremap <silent><C-f> :FZF<CR>
+  nnoremap <silent><C-f> :FZF<CR>
+  vnoremap <silent><C-f> :FZF<CR>
+'''
+
+# "" や () をインサートし易くする
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# スニペット
+[[plugins]]
+repo = 'Shougo/neosnippet'
+## 「neosnippet default snippets cannot be loaded」のエラーを回避する為に、default snippets を無効にする
+hook_add = '''
+  let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/'
+  let g:neosnippet#disable_runtime_snippets = {
+      \'_': 1
+  \ }
+
+  imap <C-u> <Plug>(neosnippet_expand_or_jump)
+  smap <C-u> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-u> <Plug>(neosnippet_expand_target)
+'''
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# ディレクトリツリー表示
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# ステータスバーの表示
+[[plugins]]
+repo = 'atsushi130/lightline.vim'
+rev  = 'master'
+## NERDTreeToggleを [Control + t] にキーマッピング
+hook_add = '''
+  let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"✕":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'component_function': {
+      \   'readonly': 'LightlineReadonly',
+      \   'fugitive': 'LightlineFugitive',
+      \ },
+  \ }
+
+  function! LightlineReadonly()
+    return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '✕' : ''
+  endfunction
+
+  function! LightlineFugitive()
+    if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
+      let branch = fugitive#head()
+      return branch !=# '' ? ''.branch : ''
+    endif
+    return ''
+  endfunction
+
+  nnoremap <silent><C-t> :NERDTreeToggle<CR>
+  let g:NERDTreeShowHidden=1
+'''
+
+# 構文チェックプラグイン
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add = '''
+  let g:syntastic_mode_map = {
+    \ 'mode': 'active',
+    \ 'active_filetypes': ['rust'],
+    \ 'passive_filetypes': ['html']
+    \ }
+'''
+
+# 閉じ括弧の自動挿入
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+# ES6 のシンタックスハイライト
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+
+# JSX のシンタックスハイライト
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'jason0x43/vim-js-indent'
+on_ft = ['javascript', 'typescript', 'html']
+hook_add = '''
+  let g:js_indent_typescript = 1
+'''
+
+# TypeScript のファイルタイプ検出
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+# TypeScript のシンタックスチェック
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+hook_add = '''
+  let g:tsuquyomi_disable_quickfix = 1
+  let g:typescript_compiler_binary = 'tsc'
+  let g:typescript_compiler_options = ''
+  let g:syntastic_typescript_checkers = ['tsuquyomi']
+'''
+
+# Rust のシンタックスチェック
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+  let g:syntastic_rust_checkers = ['rustc']
+'''
+# tags自動更新
+[[plugins]]
+repo = 'szw/vim-tags'
+
+# tagbar メソッドリスト
+[[plugins]]
+repo = 'majutsushi/tagbar'
+## :TagbarToggle を [Control + g] にマッピング
+hook_add = '''
+  let g:tagbar_type_typescript = {
+    \ 'ctagstype': 'typescript',
+    \ 'kinds': [
+      \ 'c:classes',
+      \ 'n:modules',
+      \ 'f:functions',
+      \ 'v:variables',
+      \ 'v:varlambdas',
+      \ 'm:members',
+      \ 'i:interfaces',
+      \ 'e:enums',
+    \ ]
+  \ }
+  let g:tagbar_width = 30
+  highlight TagbarScope guifg=Green ctermfg=Green
+
+  nnoremap <silent><C-g> :TagbarToggle<CR>
+'''
+
+# 異なるエディタで設定を共有
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+# Markdown プラグイン
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+## Markdown を書く時閉じないようにする
+hook_add = '''
+  let g:vim_markdown_folding_disabled=1
+'''
+
+# Markdown プレビュー
+[[plugins]]
+repo = 'kannokanno/previm'
+## :PrevimOpen を P にマッピング
+hook_add = '''
+  nnoremap <silent><C-p> :PrevimOpen<CR>
+'''
+
+# ブラウザ自動同期
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+# 置換いい感じ
+[[plugins]]
+repo = 'osyo-manga/vim-over'
+## ,m to start vim-over
+## カーソル下の単語をハイライト付きで置換
+## コピーした文字列をハイライト付きで置換
+hook_add = '''
+  nnoremap <silent> ,m :OverCommandLine<CR>
+  nnoremap sub :OverCommandLine<CR>%s/<C-r><C-w>//g<Left><Left>
+  nnoremap subp y:OverCommandLine<CR>%s!<C-r>=substitute(@0, '!', '\\!','g')<CR>!!gI<Left><Left><Left>
+'''
