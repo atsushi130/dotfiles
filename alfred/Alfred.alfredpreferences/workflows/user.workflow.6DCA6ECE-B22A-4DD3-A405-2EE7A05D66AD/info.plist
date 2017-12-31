@@ -79,6 +79,8 @@ elif [ $1 = "disaster" ]; then
 	open -a /Applications/Vivaldi.app https://disaster-hack.slack.com/
 elif [ $1 = "vapor" ]; then
 	open -a /Applications/Vivaldi.app https://qutheory.slack.com/
+elif [ $1 = "yahoo" ]; then
+	open -a /Applications/Vivaldi.app https://tobitate-yahoojapan.slack.com/
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
