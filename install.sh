@@ -235,28 +235,6 @@ copyClonedFiles() {
     cp ~/dotfiles/XcodeColorSchema/xcode-dusk.vim ~/.vim/colors/xcode-dusk.vim
 }
 
-setupEachOS() {
-
-    if [ "$(uname)" = 'Darwin' ]; then
-
-        # install realm object server
-        wget https://static.realm.io/downloads/mobile-platform/latest/realm-mobile-platform.zip
-        unzip ./realm-mobile-platform.zip -d ~/.realm
-        rm -rf ./realm-mobile-platform.zip
-    fi
-
-    if [ $(expr substr $(uname -s) 1 5) = 'Linux' ]; then
-
-        # install
-        wget http://downloads.sourceforge.net/project/zsh/zsh/5.2/zsh-5.2.tar.gz
-        tar xzvf zsh-5.2.tar.gz
-        cd zsh-5.2
-        ./configure
-        sudo make
-        sudo make install
-    fi
-}
-
 setupZplug() {
 
     # insatll zplug
@@ -286,6 +264,5 @@ backupSettingFiles
 copySettingFiles
 cloneRepository
 copyClonedFiles
-setupEachOS
 setupZplug
 after
