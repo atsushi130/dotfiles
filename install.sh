@@ -159,61 +159,54 @@ backupSettingFiles() {
 copySettingFiles() {
 
     # vimrc
-    cp -f  ~/dotfiles/vim/.vimrc              ~/.vimrc
-    cp -f  ~/dotfiles/vim/.vim.d/setting.vim  ~/.vim.d/setting.vim
-    cp -f  ~/dotfiles/vim/.vim.d/mapping.vim  ~/.vim.d/mapping.vim
-    cp -f  ~/dotfiles/vim/.vim.d/color.vim    ~/.vim.d/color.vim
-    cp -f  ~/dotfiles/vim/.ideavimrc          ~/.ideavimrc
-    cp -f  ~/dotfiles/vim/.xvimrc             ~/.xvimrc
-    cp -f  ~/dotfiles/vim/.vimniumrc          ~/.vimniumrc
-    cp -f  ~/dotfiles/vim/dein/dein.toml      ~/.vim/dein/dein.toml
-    cp -f  ~/dotfiles/vim/dein/dein_lazy.toml ~/.vim/dein/dein_lazy.toml
+    cp -f  ./vim/.vimrc              ~/.vimrc
+    cp -f  ./vim/.vim.d/setting.vim  ~/.vim.d/setting.vim
+    cp -f  ./vim/.vim.d/mapping.vim  ~/.vim.d/mapping.vim
+    cp -f  ./vim/.vim.d/color.vim    ~/.vim.d/color.vim
+    cp -f  ./vim/.ideavimrc          ~/.ideavimrc
+    cp -f  ./vim/.xvimrc             ~/.xvimrc
+    cp -f  ./vim/.vimniumrc          ~/.vimniumrc
+    cp -f  ./vim/dein/dein.toml      ~/.vim/dein/dein.toml
+    cp -f  ./vim/dein/dein_lazy.toml ~/.vim/dein/dein_lazy.toml
 
     # sshrc
-    cp -f  ~/dotfiles/.sshrc                  ~/.sshrc
-    cp -f  ~/dotfiles/vim/.vimrc              ~/.sshrc.d/.vimrc
-    cp -f  ~/dotfiles/vim/setting.vim         ~/.sshrc.d/setting.vim
-    cp -f  ~/dotfiles/vim/mapping.vim         ~/.sshrc.d/mapping.vim
-    cp -f  ~/dotfiles/vim/color.vim           ~/.sshrc.d/color.vim
+    cp -f  ./.sshrc                  ~/.sshrc
+    cp -f  ./vim/.vimrc              ~/.sshrc.d/.vimrc
+    cp -f  ./vim/setting.vim         ~/.sshrc.d/setting.vim
+    cp -f  ./vim/mapping.vim         ~/.sshrc.d/mapping.vim
+    cp -f  ./vim/color.vim           ~/.sshrc.d/color.vim
 
     # zshrc
-    cp -f  ~/dotfiles/zsh/.zshrc              ~/.zshrc
-    cp -f  ~/dotfiles/zsh/.zsh.d/fzf.zsh      ~/.zsh.d/fzf.zsh
-    cp -f  ~/dotfiles/zsh/.zsh.d/config.zsh   ~/.zsh.d/config.zsh
-    cp -f  ~/dotfiles/zsh/.zsh.d/zplug.zsh    ~/.zsh.d/zplug.zsh
+    cp -f  ./zsh/.zshrc              ~/.zshrc
+    cp -f  ./zsh/.zsh.d/fzf.zsh      ~/.zsh.d/fzf.zsh
+    cp -f  ./zsh/.zsh.d/config.zsh   ~/.zsh.d/config.zsh
+    cp -f  ./zsh/.zsh.d/zplug.zsh    ~/.zsh.d/zplug.zsh
 
     # tmux
-    cp -f  ~/dotfiles/tmux/.tmux.conf         ~/.tmux.conf
+    cp -f  ./tmux/.tmux.conf         ~/.tmux.conf
 
     # git
-    cp -f  ~/dotfiles/.gitconfig              ~/.gitconfig
-    cp -f  ~/dotfiles/.gitignore              ~/.gitignore
+    cp -f  ./.gitconfig              ~/.gitconfig
+    cp -f  ./.gitignore              ~/.gitignore
 
     # editor config
-    cp -f  ~/dotfiles/.editorConfig           ~/.editorConfig
+    cp -f  ./.editorConfig           ~/.editorConfig
 
     # alias
-    cp -f  ~/dotfiles/.aliasrc                ~/.aliasrc
-
-    # brewfile
-    cp -rf ~/dotfiles/.brewfile               ~/.brewfile
-
-    # pet
-    cp -f  ~/dotfiles/pet/config.toml         ~/.config/pet/config.toml
-    cp -f  ~/dotfiles/pet/snippet.toml        ~/.config/pet/snippet.toml
+    cp -f  ./.aliasrc                ~/.aliasrc
 
     # iterm
-    cp -f  ~/dotfiles/iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
+    cp -f  ./iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
 
     # alfred
-    cp -rf ~/dotfiles/alfred/Alfred.alfredpreferences   ~/.alfred
+    cp -rf ./alfred/Alfred.alfredpreferences   ~/.alfred
 
     # jetbrains
-    cp -f  ~/dotfiles/jetbrains/snippets/java.xml       ~/Library/Preferences/IntelliJIdea*/templates/java.xml
-    cp -f  ~/dotfiles/jetbrains/colors/JavaDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/JavaDusk.icls
-    cp -f  ~/dotfiles/jetbrains/colors/ScalaDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls
-    cp -f  ~/dotfiles/jetbrains/colors/KotlinDusk.icls  ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls
-    cp -f  ~/dotfiles/jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
+    cp -f  ./jetbrains/snippets/java.xml       ~/Library/Preferences/IntelliJIdea*/templates/java.xml
+    cp -f  ./jetbrains/colors/JavaDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/JavaDusk.icls
+    cp -f  ./jetbrains/colors/ScalaDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls
+    cp -f  ./jetbrains/colors/KotlinDusk.icls  ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls
+    cp -f  ./jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
 }
 
 cloneRepository() {
@@ -228,11 +221,11 @@ cloneRepository() {
 copyClonedFiles() {
 
     # copy dictionary files
-    cp ~/dotfiles/dictionary/PHP.dict ~/.vim/dictionary/PHP.dict
-    cp ~/dotfiles/dictionary/javascript.dict ~/.vim/dictionary/javascript.dict
+    cp ./dictionary/PHP.dict ~/.vim/dictionary/PHP.dict
+    cp ./dictionary/javascript.dict ~/.vim/dictionary/javascript.dict
 
     # copy xcode-dusk.vim
-    cp ~/dotfiles/XcodeColorSchema/xcode-dusk.vim ~/.vim/colors/xcode-dusk.vim
+    cp ./XcodeColorSchema/xcode-dusk.vim ~/.vim/colors/xcode-dusk.vim
 }
 
 setupZplug() {
@@ -250,8 +243,8 @@ setupZplug() {
 after() {
 
     # remove
-    cd ~/
-    rm -rf ~/dotfiles
+    cd ..
+    rm -rf ./dotfiles
 
     # restart shell proccess
     exec $SHELL -l
