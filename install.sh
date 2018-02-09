@@ -141,6 +141,9 @@ backupSettingFiles() {
     cp -f  ~/.config/pet/config.toml  ~/.config/pet/config.toml.backup
     cp -f  ~/.config/pet/snippet.toml ~/.config/pet/snippet.toml.backup
 
+    # Xcode keybinding
+    cp -f ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings  ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings.backup
+
     # iterm
     cp -f  ~/.iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist.backup
 
@@ -194,6 +197,10 @@ copySettingFiles() {
 
     # alias
     cp -f  ./.aliasrc                ~/.aliasrc
+
+    # Xcode keybinding
+    cp -f ./xcode/Default.idekeybindings  ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings
+
 
     # iterm
     cp -f  ./iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
