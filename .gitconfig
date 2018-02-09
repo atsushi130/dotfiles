@@ -1,8 +1,8 @@
 [user]
-	name = atmiyake
-	email = atmiyake@yahoo-corp.jp
+	name = atsushi130
+	email = atsushi_main@outlook.jp
 [core]
-	excludesfile = /Users/atmiyake/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim -c \"set fenc=utf-8\"
 	quotepath = false
 	filemode = false
