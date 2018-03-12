@@ -1,0 +1,171 @@
+<scheme name="Darcula" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2018-03-11T00:23:01</property>
+    <property name="ide">AppCode</property>
+    <property name="ideVersion">2017.3.3.0.0</property>
+    <property name="modified">2018-03-11T00:23:09</property>
+    <property name="originalScheme">_@user_Darcula</property>
+  </metaInfo>
+  <attributes>
+    <option name="SWIFT_BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="41b645" />
+      </value>
+    </option>
+    <option name="SWIFT_BRACES">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_BRACKETS">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_CLASS_REFERENCE">
+      <value>
+        <option name="FOREGROUND" value="a0be" />
+      </value>
+    </option>
+    <option name="SWIFT_COLON">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_COMMA">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_COND_UNCOMPILED">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_DIRECTIVE">
+      <value>
+        <option name="FOREGROUND" value="b21889" />
+      </value>
+    </option>
+    <option name="SWIFT_DOT">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_ENUM_VALUE">
+      <value>
+        <option name="FOREGROUND" value="83c057" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="SWIFT_EXTERNAL_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="83c057" />
+      </value>
+    </option>
+    <option name="SWIFT_FUNCTION_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_GLOBAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="b21889" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="SWIFT_LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="41b645" />
+      </value>
+    </option>
+    <option name="SWIFT_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_MODULE_NAME">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_NUMBER">
+      <value>
+        <option name="FOREGROUND" value="786dc4" />
+      </value>
+    </option>
+    <option name="SWIFT_OPERATION_SIGN">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_PARENTHESES">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_PROPERTY">
+      <value>
+        <option name="FOREGROUND" value="83c057" />
+      </value>
+    </option>
+    <option name="SWIFT_PROTOCOL_REFERENCE">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_SELF_SUPER_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="b21889" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="SWIFT_SEMICOLON">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_SHEBANG_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="41b645" />
+      </value>
+    </option>
+    <option name="SWIFT_STRING">
+      <value>
+        <option name="FOREGROUND" value="db2c38" />
+      </value>
+    </option>
+    <option name="SWIFT_STRUCT_REFERENCE">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="SWIFT_TYPE_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="83c057" />
+      </value>
+    </option>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+        <option name="BACKGROUND" value="2b2b2b" />
+        <option name="EFFECT_TYPE" value="5" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
