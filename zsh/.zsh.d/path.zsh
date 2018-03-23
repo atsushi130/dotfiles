@@ -47,3 +47,6 @@ export PATH=~/.gactions/bin:$PATH
 
 #Homebrew
 export HOMEBREW_GITHUB_API_TOKEN="set Github API token"
+
+# gcloud
+export PATH=~/.gcloud/bin:$PATH
