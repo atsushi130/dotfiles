@@ -1,106 +1,21 @@
 #!/bin/bash
 
-isExistDictionarys() {
-
-    # .iterm
-    if [ -e ~/.iterm ]; then
-    	echo "exist .iterm directory.";
-    else
-    	echo "mkdir .iterm...";
-    	mkdir ~/.iterm
-    fi
-
-    # .alfred
-    if [ -e ~/.alfred ]; then
-    	echo "exist .alfred directory.";
-    else
-    	echo "mkdir .alfred...";
-    	mkdir ~/.alfred
-    fi
-
-    # .vim
-    if [ -e ~/.vim ]; then
-    	echo "exist .vim directory.";
-    else
-    	echo "mkdir .vim...";
-    	mkdir ~/.vim
-    fi
-
-    # .vim/dictionary
-    if [ -e ~/.vim/dictionary ]; then
-    	echo "exist dictionary directory.";
-    else
-    	echo "mkdir dictionary ...";
-    	mkdir ~/.vim/dictionary
-    fi
-
-    # .vim/colors
-    if [ -e ~/.vim/colors ]; then
-    	echo "exist colors directory.";
-    else
-    	echo "mkdir colors ...";
-    	mkdir ~/.vim/colors
-    fi
-
-    # .vim/dein
-    if [ -e ~/.vim/dein ]; then
-    	echo "exist dein directory.";
-    else
-    	echo "mkdir dein ...";
-    	mkdir ~/.vim/dein
-    fi
-
-    # .config
-    if [ -e ~/.config ]; then
-    	echo "exist .config directory.";
-    else
-    	echo "mkdir .config ...";
-    	mkdir ~/.config
-    fi
-
-    # .vim.d
-    if [ -e ~/.vim.d ]; then
-    	echo "exist .vim.d directory.";
-    else
-    	echo "mkdir .vim.d ...";
-    	mkdir ~/.vim.d
-    fi
-
-    # .zsh.d
-    if [ -e ~/.zsh.d ]; then
-    	echo "exist .zsh.d directory.";
-    else
-    	echo "mkdir .zsh.d ...";
-    	mkdir ~/.zsh.d
-    fi
-
-    # .sshrc.d
-    if [ -e ~/.sshrc.d ]; then
-    	echo "exist .sshrc.d directory.";
-    else
-    	echo "mkdir .sshrc.d ...";
-    	mkdir ~/.sshrc.d
-    fi
-
-    # .realm
-    if [ -e ~/.realm ]; then
-        echo "exist .realm directory.";
-    else
-        echo "mkdir .realm ...";
-        mkdir ~/.realm
-    fi
-
-    # .brewfile
-    if [ -e ~/.brewfile ]; then
-        echo "exist .brewfile directory.";
-    else
-        echo "mkdir .brewfile ...";
-        mkdir ~/.brewfile
-    fi
+:"Make directory" && {
+    mkdir ~/.iterm
+    mkdir ~/.alfred
+    mkdir ~/.vim
+	mkdir ~/.vim/dictionary
+    mkdir ~/.vim/colors
+    mkdir ~/.vim/dein
+    mkdir ~/.config
+    mkdir ~/.vim.d
+    mkdir ~/.zsh.d
+    mkdir ~/.sshrc.d
+    mkdir ~/.realm
+    mkdir ~/.brewfile
 }
 
-backupSettingFiles() {
-
+:"Backup" && {
     # vimrc
     cp -f  ~/.vimrc                   ~/.vimrc.backup
     cp -f  ~/.vim.d/setting.vim       ~/.vim.d/setting.vim.backup
@@ -156,10 +71,10 @@ backupSettingFiles() {
     cp -f  ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls  ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls.backup
     cp -f  ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls.backup
     cp -f  ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls.backup
-
 }
 
-copySettingFiles() {
+
+:"Install setting files" && {
 
     # vimrc
     cp -f  ./vim/.vimrc              ~/.vimrc
@@ -216,7 +131,7 @@ copySettingFiles() {
     cp -f  ./jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
 }
 
-cloneRepository() {
+:"Clone repository" && {
 
     # git clone dictionary repository
     git clone https://github.com/atsushi130/dictionary.git
@@ -225,7 +140,7 @@ cloneRepository() {
     git clone https://github.com/atsushi130/XcodeColorSchema.git
 }
 
-copyClonedFiles() {
+:"Copy cloned repository" && {
 
     # copy dictionary files
     cp ./dictionary/PHP.dict ~/.vim/dictionary/PHP.dict
@@ -235,7 +150,7 @@ copyClonedFiles() {
     cp ./XcodeColorSchema/xcode-dusk.vim ~/.vim/colors/xcode-dusk.vim
 }
 
-setupZplug() {
+:"Setup zplug" && {
 
     # insatll zplug
     curl -sL https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
@@ -247,7 +162,7 @@ setupZplug() {
     source ~/.zshrc
 }
 
-after() {
+:"After" && {
 
     # remove
     cd ..
@@ -257,12 +172,3 @@ after() {
     exec $SHELL -l
 }
 
-
-# execute tasks
-isExistDictionarys
-backupSettingFiles
-copySettingFiles
-cloneRepository
-copyClonedFiles
-setupZplug
-after
