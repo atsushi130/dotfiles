@@ -10,7 +10,7 @@
     tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     checkouter = "!f () {\
         if [ $# -eq 0 -a `which fzf` ]; then\
-            git branch -a --sort=authordate | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
+            git branch -a --sort=authordate | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
         elif [ $# -ge 1 ]; then\
             git checkout ${@};\
         fi;\
