@@ -23,6 +23,13 @@
             git checkout ${@};\
         fi;\
     };f"
+    untrackd = "!f () {\
+        if [ $# -eq 0 -a `which fzf` ]; then\
+            git clean -dn | sed -e 's/Would remove //' | fzf --ansi --reverse --prompt='remove ' | tr -d ' \\*' | xargs -n 1 rm -rf;\
+        elif [ $# -ge 1 ]; then\
+            rm -rf ${@};\
+        fi;\
+    };f"
     branchd = "!f () {\
         if [ $# -eq 0 -a `which fzf` ]; then\
             git branch --sort=authordate | fzf --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
