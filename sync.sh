@@ -1,6 +1,6 @@
 #!/bin/bash
 
-:"Update configuration files" && {
+: "Update configuration files" && {
     cp -f ~/.vimrc                   ./vim/.vimrc
     cp -f ~/.xvimrc                  ./vim/.xvimrc
     cp -f ~/.ideavimrc               ./vim/.ideavimrc
@@ -24,10 +24,10 @@
     cp -f ~/.config/pet/snippet.toml ./pet/snippet.toml
 }
 
-:"Setup iTerm2" && {
+: "Setup iTerm2" && {
     cp -f ~/.iterm/com.googlecode.iterm2.plist ./iterm/com.googlecode.iterm2.plist
 }
 
-:"Setup Alfred" && {
+: "Setup Alfred" && {
     cp -rf ~/.alfred/Alfred.alfredpreferences ./alfred/
 }

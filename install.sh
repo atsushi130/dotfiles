@@ -1,6 +1,6 @@
 #!/bin/bash
 
-:"Make directory" && {
+: "Make directory" && {
     mkdir ~/.iterm
     mkdir ~/.alfred
     mkdir ~/.vim
@@ -15,7 +15,7 @@
     mkdir ~/.brewfile
 }
 
-:"Backup" && {
+: "Backup" && {
     # vimrc
     cp -f  ~/.vimrc                   ~/.vimrc.backup
     cp -f  ~/.vim.d/setting.vim       ~/.vim.d/setting.vim.backup
@@ -75,7 +75,7 @@
 }
 
 
-:"Install setting files" && {
+: "Install setting files" && {
 
     # vimrc
     cp -f  ./vim/.vimrc              ~/.vimrc
@@ -133,7 +133,7 @@
     cp -f  ./jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
 }
 
-:"Clone repository" && {
+: "Clone repository" && {
 
     # git clone dictionary repository
     git clone https://github.com/atsushi130/dictionary.git
@@ -142,7 +142,7 @@
     git clone https://github.com/atsushi130/XcodeColorSchema.git
 }
 
-:"Copy cloned repository" && {
+: "Copy cloned repository" && {
 
     # copy dictionary files
     cp ./dictionary/PHP.dict ~/.vim/dictionary/PHP.dict
@@ -152,7 +152,7 @@
     cp ./XcodeColorSchema/xcode-dusk.vim ~/.vim/colors/xcode-dusk.vim
 }
 
-:"Setup zplug" && {
+: "Setup zplug" && {
 
     # insatll zplug
     curl -sL https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
@@ -164,7 +164,7 @@
     source ~/.zshrc
 }
 
-:"After" && {
+: "After" && {
 
     # remove
     cd ..
