@@ -16,6 +16,13 @@
             git checkout ${@};\
         fi;\
     };f"
+    checkoutf = "!f () {\
+        if [ $# -eq 0 -a `which fzf` ]; then\
+            git status | grep modified: | sed -e 's/\tmodified:   //' | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
+        elif [ $# -ge 1 ]; then\
+            git checkout ${@};\
+        fi;\
+    };f"
     branchd = "!f () {\
         if [ $# -eq 0 -a `which fzf` ]; then\
             git branch --sort=authordate | fzf --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
