@@ -1,11 +1,11 @@
 [user]
-	name = atsushi130
-	email = atsushi_main@outlook.jp
+    name = atsushi130
+    email = atsushi_main@outlook.jp
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim -c \"set fenc=utf-8\"
-	quotepath = false
-	filemode = false
+    excludesfile = ~/.gitignore
+    editor = vim -c \"set fenc=utf-8\"
+    quotepath = false
+    filemode = false
 [alias]
     tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     develop = checkout develop
@@ -45,4 +45,4 @@
         fi;\
     };f"
 [merge]
-	ff = false
+    ff = false
