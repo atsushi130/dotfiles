@@ -30,6 +30,13 @@
             rm -rf ${@};\
         fi;\
     };f"
+    differ = "!f () {\
+        if [ $# -eq 0 -a `which fzf` ]; then\
+            git status | grep modified: | sed -e 's/\tmodified:   //' | fzf --ansi --reverse --prompt='git diff ' | tr -d ' \\*' | xargs -n 1 git diff;\
+        elif [ $# -ge 1 ]; then\
+            git diff ${@};\
+        fi;\
+    };f"
     branchd = "!f () {\
         if [ $# -eq 0 -a `which fzf` ]; then\
             git branch --sort=authordate | fzf --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
