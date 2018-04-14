@@ -8,6 +8,7 @@
 	filemode = false
 [alias]
     tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    develop = checkout develop
     checkouter = "!f () {\
         if [ $# -eq 0 -a `which fzf` ]; then\
             git branch -a --sort=authordate | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
