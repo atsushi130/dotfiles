@@ -15,5 +15,12 @@
             git checkout ${@};\
         fi;\
     };f"
+    branchd = "!f () {\
+        if [ $# -eq 0 -a `which fzf` ]; then\
+            git branch --sort=authordate | fzf --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
+        elif [ $# -ge 1 ]; then\
+            git branch -D ${@};\
+        fi;\
+    };f"
 [merge]
 	ff = false
