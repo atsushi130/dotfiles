@@ -13,6 +13,7 @@
     mkdir ~/.sshrc.d
     mkdir ~/.realm
     mkdir ~/.brewfile
+    mkdir ~/.atom
 }
 
 : "Backup" && {
@@ -52,6 +53,9 @@
 
     # brewfile
     cp -rf ~/.brewfile                ~/.brewfile.backup
+
+    # atom
+    cp -rf ~/.atom                    ~/.atom.backup
 
     # pet
     cp -f  ~/.config/pet/config.toml  ~/.config/pet/config.toml.backup
@@ -131,6 +135,9 @@
     cp -f  ./jetbrains/colors/ScalaDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls
     cp -f  ./jetbrains/colors/KotlinDusk.icls  ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls
     cp -f  ./jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
+
+    # atom
+    cp -f  ./atom/keymap.cson ~/.atom/keymap.cson
 }
 
 : "Clone repository" && {
