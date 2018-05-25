@@ -1,0 +1,19 @@
+# keymap
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'ctrl-a': 'vim-mode-plus:move-to-first-character-of-line'
+  'ctrl-e': 'vim-mode-plus:move-to-last-character-of-line'
+  'ctrl-s': 'core:save'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'ctrl-j': 'vim-mode-plus:activate-normal-mode'
+  'ctrl-s': 'core:save'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  'ctrl-a': 'vim-mode-plus:move-to-first-character-of-line'
+  'ctrl-e': 'vim-mode-plus:move-to-last-character-of-line'
+  'ctrl-s': 'core:save'
+
+'.editor:not(.mini)':
+  'cmd-b': 'hyperclick:confirm-cursor'
+  'cmd-ctrl-o': 'fuzzy-finder:toggle-file-finder'
