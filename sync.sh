@@ -12,6 +12,7 @@
     cp -f ~/.vim/dein/dein_lazy.toml ./vim/dein/dein_lazy.toml
     cp -f ~/.zshrc                   ./zsh/.zshrc
     cp -f ~/.zsh.d/fzf.zsh           ./zsh/.zsh.d/fzf.zsh
+    cp -f ~/.zsh.d/ghq.zsh           ./zsh/.zsh.d/ghq.zsh
     cp -f ~/.zsh.d/config.zsh        ./zsh/.zsh.d/config.zsh
     cp -f ~/.zsh.d/zplug.zsh         ./zsh/.zsh.d/zplug.zsh
     cp -f ~/.sshrc                   ./.sshrc
