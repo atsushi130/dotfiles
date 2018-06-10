@@ -31,6 +31,7 @@
     # zsh
     cp -f  ~/.zshrc                   ~/.zshrc.backup
     cp -f  ~/.zsh.d/fzf.zsh           ~/.zsh.d/fzf.zsh.backup
+    cp -f  ~/.zsh.d/ghq.zsh           ~/.zsh.d/ghq.zsh.backup
     cp -f  ~/.zsh.d/config.zsh        ~/.zsh.d/config.zsh.backup
     cp -f  ~/.zsh.d/path.zsh          ~/.zsh.d/path.zsh.backup
     cp -f  ~/.zsh.d/zplug.zsh         ~/.zsh.d/zplug.zsh.backup
@@ -102,8 +103,9 @@
     # zshrc
     cp -f  ./zsh/.zshrc              ~/.zshrc
     cp -f  ./zsh/.zsh.d/fzf.zsh      ~/.zsh.d/fzf.zsh
+    cp -f  ./zsh/.zsh.d/ghq.zsh      ~/.zsh.d/ghq.zsh
     cp -f  ./zsh/.zsh.d/config.zsh   ~/.zsh.d/config.zsh
-    cp -f  ./zsh/.zsh.d/path.zsh   ~/.zsh.d/path.zsh
+    cp -f  ./zsh/.zsh.d/path.zsh     ~/.zsh.d/path.zsh
     cp -f  ./zsh/.zsh.d/zplug.zsh    ~/.zsh.d/zplug.zsh
 
     # tmux
