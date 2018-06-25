@@ -59,3 +59,8 @@ export LC_ALL="en_US.UTF-8"
 
 # vim で <C-s> と <C-q> を利用可能にする
 stty -ixon -ixoff
+
+# kube の補完設定
+if [[ $(which kubectl) ]]; then
+  source <(kubectl completion zsh)
+fi
