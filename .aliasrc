@@ -16,6 +16,8 @@ alias hyper="vim ~/.hyper.js"
 alias program="cd ~/program"
 alias realm="~/.realm/start-object-server.command"
 alias gtop="~/.gtop/bin/gtop"
+alias derived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
+alias github="hub browse"
 # alias gtop="(cd ~/.gtop/bin/gtop && npm start)"
 
 vim_version=`vim --version | head -1 | sed "s/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\2/"`
