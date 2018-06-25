@@ -18,7 +18,13 @@ fi
 
 # zplug のプラグイン
 [ -f ~/.zsh.d/zplug.zsh ] && source ~/.zsh.d/zplug.zsh
-[[ -s /Users/atmiyake/.rsvm/rsvm.sh ]] && . /Users/atmiyake/.rsvm/rsvm.sh # This loads RSVM
+[[ -s /Users/atsushi/.rsvm/rsvm.sh ]] && . /Users/atsushi/.rsvm/rsvm.sh # This loads RSVM
 
 # added by travis gem
-[ -f /Users/atmiyake/.travis/travis.sh ] && source /Users/atmiyake/.travis/travis.sh
+[ -f /Users/atsushi/.travis/travis.sh ] && source /Users/atsushi/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/atsushi/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/atsushi/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/atsushi/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/atsushi/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
