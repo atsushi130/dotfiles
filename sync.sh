@@ -15,6 +15,7 @@
     cp -f ~/.zsh.d/ghq.zsh           ./zsh/.zsh.d/ghq.zsh
     cp -f ~/.zsh.d/config.zsh        ./zsh/.zsh.d/config.zsh
     cp -f ~/.zsh.d/zplug.zsh         ./zsh/.zsh.d/zplug.zsh
+    cp -f ~/.zsh.d/dotman.zsh         ./zsh/.zsh.d/dotman.zsh
     cp -f ~/.sshrc                   ./.sshrc
     cp -f ~/.tmux.conf               ./tmux/.tmux.conf
     cp -f ~/.aliasrc                 ./.aliasrc
