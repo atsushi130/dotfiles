@@ -19,6 +19,12 @@ alias gtop="~/.gtop/bin/gtop"
 alias derived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 alias github="hub browse"
 alias hs="http_status_code_searcher"
+alias kubelog="kube_pods_monitoring"
+function kube_pods_monitoring() {
+    kubectl get pods | awk 'NR > 1 {print $1}' | fzf-tmux --ansi --reverse --prompt='monitoring pods is ' | tr -d ' \\*' | xargs -Ipods kubectl logs pods api -f
+}
+
+
 # alias gtop="(cd ~/.gtop/bin/gtop && npm start)"
 
 vim_version=`vim --version | head -1 | sed "s/^.*\ \([0-9]\)\.\([0-9]\)\ .*$/\1\2/"`
