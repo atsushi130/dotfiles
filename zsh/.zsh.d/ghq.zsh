@@ -1,5 +1,5 @@
 function ghq-fzf() {
-  local selected_dir=$(ghq list | fzf --query="$LBUFFER")
+  local selected_dir=$(ghq list | fzf-tmux --query="$LBUFFER")
 
   if [ -n "$selected_dir" ]; then
     BUFFER="cd $(ghq root)/${selected_dir}"
