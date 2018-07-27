@@ -21,7 +21,12 @@ alias github="hub browse"
 alias hs="http_status_code_searcher"
 alias kubelog="kube_pods_monitoring"
 function kube_pods_monitoring() {
-    kubectl get pods | awk 'NR > 1 {print $1}' | fzf-tmux --ansi --reverse --prompt='monitoring pods is ' | tr -d ' \\*' | xargs -Ipods kubectl logs pods api -f
+    kubectl get pods | awk 'NR > 1 {print $1}' | grep api-deployment | fzf-tmux --ansi --reverse --prompt='monitoring pods is ' | xargs -Ipods kubectl logs pods api -f
+}
+
+alias kubecc="kube_change_project"
+function kube_change_project() {
+    gcloud projects list | awk 'NR > 1 {print $1}' | fzf --ansi --reverse --prompt='gcloud config set project ' | xargs -Iproject_name gcloud config set project project_name && gcloud container clusters get-credentials api-cluster --zone asia-northeast1-a
 }
 
 
