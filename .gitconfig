@@ -9,37 +9,32 @@
 [alias]
     tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     develop = checkout develop
-    c = checkout
-    cm = commit -m
-    s = status
-    a = add
-    master = checkout master
-    pusher = push -u origin `git branch`
     cleanup = "!f () {\
         git clean -df > /dev/null;\
         echo 'delete untracked files.';\
     };f"
+    c = checkout
+    cm = commit -m
+    s = status
+    p = push -u origin
     clear = "!f () {\
         git cleanup > /dev/null;\
         git status | grep modified: | sed -e 's/modified://' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
-    ar = "!f () {\
-        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf --ansi --reverse --prompt='git add ' | tr -d ' \\*' | xargs -n 1 git add;\
-    };f"
     cr = "!f () {\
-        git branch -a --sort=authordate | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
+        git branch -a --sort=authordate | fzf-tmux --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
     };f"
     cf = "!f () {\
-        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
+        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
     untrackd = "!f () {\
-        git clean -dn | sed -e 's/Would remove //' | fzf --ansi --reverse --prompt='remove ' | tr -d ' \\*' | xargs -n 1 rm -rf;\
+        git clean -dn | sed -e 's/Would remove //' | fzf-tmux --ansi --reverse --prompt='remove ' | tr -d ' \\*' | xargs -n 1 rm -rf;\
     };f"
-    dr = "!f () {\
-        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf --ansi --reverse --prompt='git diff ' | tr -d ' \\*' | xargs -n 1 git diff;\
+    differ = "!f () {\
+        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux --ansi --reverse --prompt='git diff ' | tr -d ' \\*' | xargs -n 1 git diff;\
     };f"
     bd = "!f () {\
-        git branch --sort=authordate | fzf --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
+        git branch --sort=authordate | fzf-tmux --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
     };f"
 [ghq]
 	root = /Users/atsushi/workspace
