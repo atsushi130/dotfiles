@@ -19,6 +19,13 @@ alias gtop="~/.gtop/bin/gtop"
 alias derived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 alias github="hub browse"
 
+alias simdoc="simulator_documents"
+function simulator_documents() {
+    uuid=`ls -lt ~/Library/Developer/CoreSimulator/Devices/ | awk 'NR == 2 {print $9}'`
+    app_uuid=`ls -lt ~/Library/Developer/CoreSimulator/Devices/$uuid/data/Containers/Data/Application | awk 'NR == 2 {print $9}'`
+    echo ~/Library/Developer/CoreSimulator/Devices/$uuid/data/Containers/Data/Application/$app_uuid/Documents
+}
+
 alias kubelogin="kube_login"
 function kube_login() {
     kubectl get pods | awk 'NR > 1 {print $1}' | grep api-deployment | fzf-tmux --ansi --reverse --prompt='monitoring pods is ' | xargs -o -Ipods kubectl exec -it pods bash
