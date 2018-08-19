@@ -22,19 +22,20 @@
         git status | grep modified: | sed -e 's/modified://' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
     cr = "!f () {\
-        git branch -a --sort=authordate | fzf-tmux --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
+<<<<<<< HEAD
+        git branch -a --sort=authordate | fzf-tmux -d 35% --preview 'echo ❯ git checkout {}' --preview-window down:1 --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
     };f"
     cf = "!f () {\
-        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
+        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux -d 35% --preview 'echo ❯ git checkout {}' --preview-window down:1 --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
     untrackd = "!f () {\
-        git clean -dn | sed -e 's/Would remove //' | fzf-tmux --ansi --reverse --prompt='remove ' | tr -d ' \\*' | xargs -n 1 rm -rf;\
+        git clean -dn | sed -e 's/Would remove //' | fzf-tmux -d 35% --preview 'echo ❯ rm -rf {}' --preview-window down:1 --ansi --reverse --prompt='remove ' | tr -d ' \\*' | xargs -n 1 rm -rf;\
     };f"
     differ = "!f () {\
-        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux --ansi --reverse --prompt='git diff ' | tr -d ' \\*' | xargs -n 1 git diff;\
+        git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux -d 35% --preview 'echo ❯ git diff {}' --preview-window down:1 --ansi --reverse --prompt='git diff ' | tr -d ' \\*' | xargs -n 1 git diff;\
     };f"
     bd = "!f () {\
-        git branch --sort=authordate | fzf-tmux --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
+        git branch --sort=authordate | fzf-tmux -d 35% --preview 'echo ❯ git branch -D {}' --preview-window down:1 --ansi --reverse --prompt='delete branch is ' | tr -d ' \\*' | xargs -n 1 git branch -D;\
     };f"
 [ghq]
 	root = /Users/atsushi/workspace
