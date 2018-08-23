@@ -17,12 +17,12 @@
     cm = commit -m
     s = status
     p = push -u origin
+    d = diff
     clear = "!f () {\
         git cleanup > /dev/null;\
         git status | grep modified: | sed -e 's/modified://' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
     cr = "!f () {\
-<<<<<<< HEAD
         git branch -a --sort=authordate | fzf-tmux -d 35% --preview 'echo ❯ git checkout {}' --preview-window down:1 --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
     };f"
     cf = "!f () {\
