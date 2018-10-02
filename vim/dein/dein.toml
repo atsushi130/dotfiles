@@ -238,3 +238,6 @@ hook_add = '''
   let dbext_default_host="host"
   let dbext_default_port="port"
 '''
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
