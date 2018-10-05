@@ -16,4 +16,4 @@
 
 '.editor:not(.mini)':
   'cmd-b': 'hyperclick:confirm-cursor'
-  'cmd-ctrl-o': 'fuzzy-finder:toggle-file-finder'
+  'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
