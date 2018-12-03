@@ -64,6 +64,7 @@
 
     # Xcode keybinding
     cp -f ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings  ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings.backup
+    cp -rf ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets.backup
 
     # iterm
     cp -f  ~/.iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist.backup
@@ -123,7 +124,7 @@
 
     # Xcode keybinding
     cp -f ./xcode/Default.idekeybindings  ~/Library/Developer/Xcode/UserData/KeyBindings/Default.idekeybindings
-
+    cp -rf ./xcode/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets
 
     # iterm
     cp -f  ./iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
