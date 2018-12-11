@@ -25,6 +25,7 @@
     cp -f  ~/.ideavimrc               ~/.ideavimrc.backup
     cp -f  ~/.xvimrc                  ~/.xvimrc.backup
     cp -f  ~/.vimniumrc               ~/.vimniumrc.backup
+    cp -f  ~/.vim/dein/.deinrc        ~/.vim/dein/.deinrc.backup
     cp -f  ~/.vim/dein/dein.toml      ~/.vim/dein/dein.toml.backup
     cp -f  ~/.vim/dein/dein_lazy.toml ~/.vim/dein/dein_lazy.toml.backup
 
@@ -91,6 +92,7 @@
     cp -f  ./vim/.ideavimrc          ~/.ideavimrc
     cp -f  ./vim/.xvimrc             ~/.xvimrc
     cp -f  ./vim/.vimniumrc          ~/.vimniumrc
+    cp -f  ./vim/dein/.deinrc        ~/.vim/dein/.deinrc
     cp -f  ./vim/dein/dein.toml      ~/.vim/dein/dein.toml
     cp -f  ./vim/dein/dein_lazy.toml ~/.vim/dein/dein_lazy.toml
 
