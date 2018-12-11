@@ -78,6 +78,10 @@ repo = 'Shougo/neosnippet-snippets'
 # ディレクトリツリー表示
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <silent><C-t> :NERDTreeToggle<CR>
+  let g:NERDTreeShowHidden=1
+'''
 
 # ステータスバーの表示
 [[plugins]]
@@ -108,9 +112,6 @@ hook_add = '''
     endif
     return ''
   endfunction
-
-  nnoremap <silent><C-t> :NERDTreeToggle<CR>
-  let g:NERDTreeShowHidden=1
 '''
 
 # 構文チェックプラグイン
