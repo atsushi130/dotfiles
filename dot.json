@@ -1,0 +1,122 @@
+{
+  "repository": "atsushi130/dotfiles",
+  "init": "/sync.sh",
+  "dotfiles": [
+    {
+      "name": "vimrc",
+      "input": "/vim/.vimrc",
+      "output": "~/.vimrc",
+      "chain": [
+        "ideavimrc", "xvimrc", "color.vim", "mapping.vim", "setting.vim", "dein", "dein_lazy"
+      ]
+    },
+    {
+      "name": "dein",
+      "input": "/vim/dein/dein.toml",
+      "output": "~/.vim/dein/dein.toml"
+    },
+    {
+      "name": "dein_lazy",
+      "input": "/vim/dein/dein_lazy.toml",
+      "output": "~/.vim/dein/dein_lazy.toml"
+    },
+    {
+      "name": "color.vim",
+      "input": "/vim/.vim.d/color.vim",
+      "output": "~/.zsh.d/color.vim"
+    },
+    {
+      "name": "mapping.vim",
+      "input": "/vim/.vim.d/mapping.vim",
+      "output": "~/.zsh.d/mapping.vim"
+    },
+    {
+      "name": "setting.vim",
+      "input": "/vim/.vim.d/setting.vim",
+      "output": "~/.zsh.d/setting.vim"
+    },
+    {
+      "name": "zshrc",
+      "input": "/zsh/.zshrc",
+      "output": "~/.zshrc",
+      "chain": [
+        "config.zsh", "fzf.zsh", "ghq.zsh", "dotman.zsh", "path.zsh", "zplug.zsh", "hs.zsh"
+      ]
+    },
+    {
+      "name": "config.zsh",
+      "input": "/zsh/.zsh.d/config.zsh",
+      "output": "~/.zsh.d/config.zsh"
+    },
+    {
+      "name": "fzf.zsh",
+      "input": "/zsh/.zsh.d/fzf.zsh",
+      "output": "~/.zsh.d/fzf.zsh"
+    },
+    {
+      "name": "ghq.zsh",
+      "input": "/zsh/.zsh.d/ghq.zsh",
+      "output": "~/.zsh.d/ghq.zsh"
+    },
+    {
+      "name": "dotman.zsh",
+      "input": "/zsh/.zsh.d/dotman.zsh",
+      "output": "~/.zsh.d/dotman.zsh"
+    },
+    {
+      "name": "path.zsh",
+      "input": "/zsh/.zsh.d/path.zsh",
+      "output": "~/.zsh.d/path.zsh"
+    },
+    {
+      "name": "zplug.zsh",
+      "input": "/zsh/.zsh.d/zplug.zsh",
+      "output": "~/.zsh.d/zplug.zsh"
+    },
+    {
+      "name": "hs.zsh",
+      "input": "/zsh/.zsh.d/hs.zsh",
+      "output": "~/.zsh.d/hs.zsh"
+    },
+    {
+      "name": "aliasrc",
+      "input": "/.aliasrc",
+      "output": "~/.aliasrc"
+    },
+    {
+      "name": "gitconfig",
+      "input": "/.gitconfig",
+      "output": "~/.gitconfig"
+    },
+    {
+      "name": "gitignore",
+      "input": "/gitignore/.gitignore",
+      "output": "~/.gitignore"
+    },
+    {
+      "name": "sshrc",
+      "input": "/.sshrc",
+      "output": "~/.sshrc"
+    },
+    {
+      "name": "ideavimrc",
+      "input": "/vim/.ideavimrc",
+      "output": "~/.ideavimrc"
+    },
+    {
+      "name": "vimniumrc",
+      "input": "/vim/.vimniumrc",
+      "output": "~/.vimniumrc"
+    },
+    {
+      "name": "xvimrc",
+      "input": "/vim/.xvimrc",
+      "output": "~/.xvimrc"
+    },
+    {
+      "name": "tmux.conf",
+      "input": "/tmux/.tmux.conf",
+      "output": "~/.tmux.conf"
+    }
+  ]
+}
