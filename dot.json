@@ -20,17 +20,17 @@
   {
     "name": "color.vim",
     "input": "/vim/.vim.d/color.vim",
-    "output": "~/.zsh.d/color.vim"
+    "output": "~/.vim.d/color.vim"
   },
   {
     "name": "mapping.vim",
     "input": "/vim/.vim.d/mapping.vim",
-    "output": "~/.zsh.d/mapping.vim"
+    "output": "~/.vim.d/mapping.vim"
   },
   {
     "name": "setting.vim",
     "input": "/vim/.vim.d/setting.vim",
-    "output": "~/.zsh.d/setting.vim"
+    "output": "~/.vim.d/setting.vim"
   },
   {
     "name": "zshrc",
