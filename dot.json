@@ -27,72 +27,72 @@
   },
   {
     "name": "dbext.vim",
-    "input": "/vim/dein/dbext.vim",
+    "input": "/vim/dein/plugins/dbext.vim",
     "output": "~/.vim/dein/plugins/dbext.vim"
   },
   {
     "name": "fzf.vim",
-    "input": "/vim/dein/fzf.vim",
+    "input": "/vim/dein/plugins/fzf.vim",
     "output": "~/.vim/dein/plugins/fzf.vim"
   },
   {
     "name": "lightline.vim",
-    "input": "/vim/dein/lightline.vim",
+    "input": "/vim/dein/plugins/lightline.vim",
     "output": "~/.vim/dein/plugins/lightline.vim"
   },
   {
     "name": "neocomplcache.vim",
-    "input": "/vim/dein/neocomplcache.vim",
+    "input": "/vim/dein/plugins/neocomplcache.vim",
     "output": "~/.vim/dein/plugins/neocomplcache.vim"
   },
   {
     "name": "neosnippet.vim",
-    "input": "/vim/dein/neosnippet.vim",
+    "input": "/vim/dein/plugins/neosnippet.vim",
     "output": "~/.vim/dein/plugins/neosnippet.vim"
   },
   {
     "name": "nerdtree.vim",
-    "input": "/vim/dein/nerdtree.vim",
+    "input": "/vim/dein/plugins/nerdtree.vim",
     "output": "~/.vim/dein/plugins/nerdtree.vim"
   },
   {
     "name": "previm.vim",
-    "input": "/vim/dein/previm.vim",
+    "input": "/vim/dein/plugins/previm.vim",
     "output": "~/.vim/dein/plugins/previm.vim"
   },
   {
     "name": "rust.vim",
-    "input": "/vim/dein/rust.vim",
+    "input": "/vim/dein/plugins/rust.vim",
     "output": "~/.vim/dein/plugins/rust.vim"
   },
   {
     "name": "syntastic.vim",
-    "input": "/vim/dein/syntastic.vim",
+    "input": "/vim/dein/plugins/syntastic.vim",
     "output": "~/.vim/dein/plugins/syntastic.vim"
   },
   {
     "name": "tagbar.vim",
-    "input": "/vim/dein/tagbar.vim",
+    "input": "/vim/dein/plugins/tagbar.vim",
     "output": "~/.vim/dein/plugins/tagbar.vim"
   },
   {
     "name": "tsuquyomi.vim",
-    "input": "/vim/dein/tsuquyomi.vim",
+    "input": "/vim/dein/plugins/tsuquyomi.vim",
     "output": "~/.vim/dein/plugins/tsuquyomi.vim"
   },
   {
     "name": "vim-js-indent.vim",
-    "input": "/vim/dein/vim-js-indent.vim",
+    "input": "/vim/dein/plugins/vim-js-indent.vim",
     "output": "~/.vim/dein/plugins/vim-js-indent.vim"
   },
   {
     "name": "vim-markdown.vim",
-    "input": "/vim/dein/vim-markdown.vim",
+    "input": "/vim/dein/plugins/vim-markdown.vim",
     "output": "~/.vim/dein/plugins/vim-markdown.vim"
   },
   {
     "name": "vim-over.vim",
-    "input": "/vim/dein/vim-over.vim",
+    "input": "/vim/dein/plugins/vim-over.vim",
     "output": "~/.vim/dein/plugins/vim-over.vim"
   },
   {
