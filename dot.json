@@ -5,14 +5,20 @@
     "input": "/vim/.vimrc",
     "output": "~/.vimrc",
     "chain": [
-      "ideavimrc", "xvimrc", "color.vim", "mapping.vim", "setting.vim", "deinrc", "dein", "dein_lazy"
+      "ideavimrc", "xvimrc", "vim.d", "deinrc", "dein.toml", "dein_lazy.toml", "plugins"
     ]
   },
   {
     "name": "vim.d",
     "type": "dir",
     "input": "/vim/.vim.d",
-    "output": "~/.vim/.vim.d"
+    "output": "~/.vim.d"
+  },
+  {
+    "name": "dein",
+    "type": "dir",
+    "input": "/vim/dein",
+    "output": "~/.vim/dein"
   },
   {
     "name": "deinrc",
@@ -21,7 +27,7 @@
     "output": "~/.vim/dein/.deinrc"
   },
   {
-    "name": "dein",
+    "name": "dein.toml",
     "type": "file",
     "input": "/vim/dein/dein.toml",
     "output": "~/.vim/dein/dein.toml",
@@ -30,10 +36,16 @@
     ]
   },
   {
-    "name": "dein_lazy",
+    "name": "dein_lazy.toml",
     "type": "file",
     "input": "/vim/dein/dein_lazy.toml",
     "output": "~/.vim/dein/dein_lazy.toml"
+  },
+  {
+    "name": "plugins",
+    "type": "dir",
+    "input": "/vim/dein/plugins",
+    "output": "~/.vim/dein/plugins"
   },
   {
     "name": "dbext.vim",
