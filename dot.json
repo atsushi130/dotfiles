@@ -9,6 +9,12 @@
     ]
   },
   {
+    "name": "vim.d",
+    "type": "dir",
+    "input": "/vim/.vim.d",
+    "output": "~/.vim/.vim.d"
+  },
+  {
     "name": "deinrc",
     "type": "file",
     "input": "/vim/dein/.deinrc",
