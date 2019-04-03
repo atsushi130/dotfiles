@@ -32,104 +32,23 @@
     "input": "/vim/dein/dein.toml",
     "output": "~/.vim/dein/dein.toml",
     "chain": [
-        "dbext.vim", "fzf.vim", "lightline.vim", "neocomplcache.vim", "neosnippet.vim", "nerdtree.vim", "previm.vim", "rust.vim", "syntastic.vim", "tagbar.vim", "tsuquyomi.vim", "vim-js-indent.vim", "vim-markdown.vim", "vim-over.vim"
+        "plugins"
     ]
   },
   {
     "name": "dein_lazy.toml",
     "type": "file",
     "input": "/vim/dein/dein_lazy.toml",
-    "output": "~/.vim/dein/dein_lazy.toml"
+    "output": "~/.vim/dein/dein_lazy.toml",
+    "chain": [
+        "dein.toml", "plugins"
+    ]
   },
   {
     "name": "plugins",
     "type": "dir",
     "input": "/vim/dein/plugins",
     "output": "~/.vim/dein/plugins"
-  },
-  {
-    "name": "dbext.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/dbext.vim",
-    "output": "~/.vim/dein/plugins/dbext.vim"
-  },
-  {
-    "name": "fzf.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/fzf.vim",
-    "output": "~/.vim/dein/plugins/fzf.vim"
-  },
-  {
-    "name": "lightline.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/lightline.vim",
-    "output": "~/.vim/dein/plugins/lightline.vim"
-  },
-  {
-    "name": "neocomplcache.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/neocomplcache.vim",
-    "output": "~/.vim/dein/plugins/neocomplcache.vim"
-  },
-  {
-    "name": "neosnippet.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/neosnippet.vim",
-    "output": "~/.vim/dein/plugins/neosnippet.vim"
-  },
-  {
-    "name": "nerdtree.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/nerdtree.vim",
-    "output": "~/.vim/dein/plugins/nerdtree.vim"
-  },
-  {
-    "name": "previm.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/previm.vim",
-    "output": "~/.vim/dein/plugins/previm.vim"
-  },
-  {
-    "name": "rust.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/rust.vim",
-    "output": "~/.vim/dein/plugins/rust.vim"
-  },
-  {
-    "name": "syntastic.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/syntastic.vim",
-    "output": "~/.vim/dein/plugins/syntastic.vim"
-  },
-  {
-    "name": "tagbar.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/tagbar.vim",
-    "output": "~/.vim/dein/plugins/tagbar.vim"
-  },
-  {
-    "name": "tsuquyomi.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/tsuquyomi.vim",
-    "output": "~/.vim/dein/plugins/tsuquyomi.vim"
-  },
-  {
-    "name": "vim-js-indent.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/vim-js-indent.vim",
-    "output": "~/.vim/dein/plugins/vim-js-indent.vim"
-  },
-  {
-    "name": "vim-markdown.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/vim-markdown.vim",
-    "output": "~/.vim/dein/plugins/vim-markdown.vim"
-  },
-  {
-    "name": "vim-over.vim",
-    "type": "file",
-    "input": "/vim/dein/plugins/vim-over.vim",
-    "output": "~/.vim/dein/plugins/vim-over.vim"
   },
   {
     "name": "color.vim",
@@ -155,50 +74,14 @@
     "input": "/zsh/.zshrc",
     "output": "~/.zshrc",
     "chain": [
-      "config.zsh", "fzf.zsh", "ghq.zsh", "dotman.zsh", "path.zsh", "zplug.zsh", "hs.zsh"
+      "zsh.d"
     ]
   },
   {
-    "name": "config.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/config.zsh",
-    "output": "~/.zsh.d/config.zsh"
-  },
-  {
-    "name": "fzf.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/fzf.zsh",
-    "output": "~/.zsh.d/fzf.zsh"
-  },
-  {
-    "name": "ghq.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/ghq.zsh",
-    "output": "~/.zsh.d/ghq.zsh"
-  },
-  {
-    "name": "dotman.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/dotman.zsh",
-    "output": "~/.zsh.d/dotman.zsh"
-  },
-  {
-    "name": "path.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/path.zsh",
-    "output": "~/.zsh.d/path.zsh"
-  },
-  {
-    "name": "zplug.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/zplug.zsh",
-    "output": "~/.zsh.d/zplug.zsh"
-  },
-  {
-    "name": "hs.zsh",
-    "type": "file",
-    "input": "/zsh/.zsh.d/hs.zsh",
-    "output": "~/.zsh.d/hs.zsh"
+    "name": "zsh.d",
+    "type": "dir",
+    "input": "/zsh/.zsh.d",
+    "output": "~/.zsh.d"
   },
   {
     "name": "aliasrc",
