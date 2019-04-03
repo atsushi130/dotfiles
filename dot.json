@@ -5,7 +5,7 @@
     "input": "/vim/.vimrc",
     "output": "~/.vimrc",
     "chain": [
-      "ideavimrc", "xvimrc", "vim.d", "deinrc", "dein.toml", "dein_lazy.toml", "plugins"
+      "ideavimrc", "xvimrc", "vim.d", "dein"
     ]
   },
   {
