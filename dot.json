@@ -98,7 +98,7 @@
   {
     "name": "gitignore",
     "type": "file",
-    "input": "/gitignore/.gitignore",
+    "input": "/.gitignore",
     "output": "~/.gitignore"
   },
   {
