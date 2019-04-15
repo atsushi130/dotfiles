@@ -1,195 +1,133 @@
 [
   {
     "name": "vimrc",
+    "type": "file",
     "input": "/vim/.vimrc",
     "output": "~/.vimrc",
     "chain": [
-      "ideavimrc", "xvimrc", "color.vim", "mapping.vim", "setting.vim", "deinrc", "dein", "dein_lazy"
+      "ideavimrc", "xvimrc", "vim.d", "dein"
     ]
   },
   {
+    "name": "vim.d",
+    "type": "dir",
+    "input": "/vim/.vim.d",
+    "output": "~/.vim.d"
+  },
+  {
+    "name": "dein",
+    "type": "dir",
+    "input": "/vim/dein",
+    "output": "~/.vim/dein"
+  },
+  {
     "name": "deinrc",
+    "type": "file",
     "input": "/vim/dein/.deinrc",
     "output": "~/.vim/dein/.deinrc"
   },
   {
-    "name": "dein",
+    "name": "dein.toml",
+    "type": "file",
     "input": "/vim/dein/dein.toml",
     "output": "~/.vim/dein/dein.toml",
     "chain": [
-        "dbext.vim", "fzf.vim", "lightline.vim", "neocomplcache.vim", "neosnippet.vim", "nerdtree.vim", "previm.vim", "rust.vim", "syntastic.vim", "tagbar.vim", "tsuquyomi.vim", "vim-js-indent.vim", "vim-markdown.vim", "vim-over.vim"
+        "plugins"
     ]
   },
   {
-    "name": "dein_lazy",
+    "name": "dein_lazy.toml",
+    "type": "file",
     "input": "/vim/dein/dein_lazy.toml",
-    "output": "~/.vim/dein/dein_lazy.toml"
+    "output": "~/.vim/dein/dein_lazy.toml",
+    "chain": [
+        "dein.toml", "plugins"
+    ]
   },
   {
-    "name": "dbext.vim",
-    "input": "/vim/dein/plugins/dbext.vim",
-    "output": "~/.vim/dein/plugins/dbext.vim"
-  },
-  {
-    "name": "fzf.vim",
-    "input": "/vim/dein/plugins/fzf.vim",
-    "output": "~/.vim/dein/plugins/fzf.vim"
-  },
-  {
-    "name": "lightline.vim",
-    "input": "/vim/dein/plugins/lightline.vim",
-    "output": "~/.vim/dein/plugins/lightline.vim"
-  },
-  {
-    "name": "neocomplcache.vim",
-    "input": "/vim/dein/plugins/neocomplcache.vim",
-    "output": "~/.vim/dein/plugins/neocomplcache.vim"
-  },
-  {
-    "name": "neosnippet.vim",
-    "input": "/vim/dein/plugins/neosnippet.vim",
-    "output": "~/.vim/dein/plugins/neosnippet.vim"
-  },
-  {
-    "name": "nerdtree.vim",
-    "input": "/vim/dein/plugins/nerdtree.vim",
-    "output": "~/.vim/dein/plugins/nerdtree.vim"
-  },
-  {
-    "name": "previm.vim",
-    "input": "/vim/dein/plugins/previm.vim",
-    "output": "~/.vim/dein/plugins/previm.vim"
-  },
-  {
-    "name": "rust.vim",
-    "input": "/vim/dein/plugins/rust.vim",
-    "output": "~/.vim/dein/plugins/rust.vim"
-  },
-  {
-    "name": "syntastic.vim",
-    "input": "/vim/dein/plugins/syntastic.vim",
-    "output": "~/.vim/dein/plugins/syntastic.vim"
-  },
-  {
-    "name": "tagbar.vim",
-    "input": "/vim/dein/plugins/tagbar.vim",
-    "output": "~/.vim/dein/plugins/tagbar.vim"
-  },
-  {
-    "name": "tsuquyomi.vim",
-    "input": "/vim/dein/plugins/tsuquyomi.vim",
-    "output": "~/.vim/dein/plugins/tsuquyomi.vim"
-  },
-  {
-    "name": "vim-js-indent.vim",
-    "input": "/vim/dein/plugins/vim-js-indent.vim",
-    "output": "~/.vim/dein/plugins/vim-js-indent.vim"
-  },
-  {
-    "name": "vim-markdown.vim",
-    "input": "/vim/dein/plugins/vim-markdown.vim",
-    "output": "~/.vim/dein/plugins/vim-markdown.vim"
-  },
-  {
-    "name": "vim-over.vim",
-    "input": "/vim/dein/plugins/vim-over.vim",
-    "output": "~/.vim/dein/plugins/vim-over.vim"
+    "name": "plugins",
+    "type": "dir",
+    "input": "/vim/dein/plugins",
+    "output": "~/.vim/dein/plugins"
   },
   {
     "name": "color.vim",
+    "type": "file",
     "input": "/vim/.vim.d/color.vim",
     "output": "~/.vim.d/color.vim"
   },
   {
     "name": "mapping.vim",
+    "type": "file",
     "input": "/vim/.vim.d/mapping.vim",
     "output": "~/.vim.d/mapping.vim"
   },
   {
     "name": "setting.vim",
+    "type": "file",
     "input": "/vim/.vim.d/setting.vim",
     "output": "~/.vim.d/setting.vim"
   },
   {
     "name": "zshrc",
+    "type": "file",
     "input": "/zsh/.zshrc",
     "output": "~/.zshrc",
     "chain": [
-      "config.zsh", "fzf.zsh", "ghq.zsh", "dotman.zsh", "path.zsh", "zplug.zsh", "hs.zsh"
+      "zsh.d"
     ]
   },
   {
-    "name": "config.zsh",
-    "input": "/zsh/.zsh.d/config.zsh",
-    "output": "~/.zsh.d/config.zsh"
-  },
-  {
-    "name": "fzf.zsh",
-    "input": "/zsh/.zsh.d/fzf.zsh",
-    "output": "~/.zsh.d/fzf.zsh"
-  },
-  {
-    "name": "ghq.zsh",
-    "input": "/zsh/.zsh.d/ghq.zsh",
-    "output": "~/.zsh.d/ghq.zsh"
-  },
-  {
-    "name": "dotman.zsh",
-    "input": "/zsh/.zsh.d/dotman.zsh",
-    "output": "~/.zsh.d/dotman.zsh"
-  },
-  {
-    "name": "path.zsh",
-    "input": "/zsh/.zsh.d/path.zsh",
-    "output": "~/.zsh.d/path.zsh"
-  },
-  {
-    "name": "zplug.zsh",
-    "input": "/zsh/.zsh.d/zplug.zsh",
-    "output": "~/.zsh.d/zplug.zsh"
-  },
-  {
-    "name": "hs.zsh",
-    "input": "/zsh/.zsh.d/hs.zsh",
-    "output": "~/.zsh.d/hs.zsh"
+    "name": "zsh.d",
+    "type": "dir",
+    "input": "/zsh/.zsh.d",
+    "output": "~/.zsh.d"
   },
   {
     "name": "aliasrc",
+    "type": "file",
     "input": "/.aliasrc",
     "output": "~/.aliasrc"
   },
   {
     "name": "gitconfig",
+    "type": "file",
     "input": "/.gitconfig",
     "output": "~/.gitconfig"
   },
   {
     "name": "gitignore",
-    "input": "/gitignore/.gitignore",
+    "type": "file",
+    "input": "/.gitignore",
     "output": "~/.gitignore"
   },
   {
     "name": "sshrc",
+    "type": "file",
     "input": "/.sshrc",
     "output": "~/.sshrc"
   },
   {
     "name": "ideavimrc",
+    "type": "file",
     "input": "/vim/.ideavimrc",
     "output": "~/.ideavimrc"
   },
   {
     "name": "vimniumrc",
+    "type": "file",
     "input": "/vim/.vimniumrc",
     "output": "~/.vimniumrc"
   },
   {
     "name": "xvimrc",
+    "type": "file",
     "input": "/vim/.xvimrc",
     "output": "~/.xvimrc"
   },
   {
     "name": "tmux.conf",
+    "type": "file",
     "input": "/tmux/.tmux.conf",
     "output": "~/.tmux.conf"
   }
