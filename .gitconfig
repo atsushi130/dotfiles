@@ -18,15 +18,19 @@
     s = status
     p = push -u origin
     d = diff
-    pr = "!f () {\
+    pi = "!f () {\
         hub pr list | fzf-tmux -d 35% --preview 'echo ❯ open pull request {}' --preview-window down:1 --ansi --reverse --prompt='open pull request ' | awk '{print $1}' | tr -d \"#\" | xargs -Ino open https://github.com/bank/cash-ios/pull/no;\
     };f"
     clear = "!f () {\
         git cleanup > /dev/null;\
         git status | grep modified: | sed -e 's/modified://' | tr -d ' \\*' | xargs -n 1 git checkout;\
     };f"
-    cr = "!f () {\
+    ci = "!f () {\
         git branch -a --sort=authordate | fzf-tmux -d 35% --preview 'echo ❯ git checkout {}' --preview-window down:1 --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 git checkout;\
+    };f"
+    ti = "!f () {\
+        git pull --tags;\
+        git tag | fzf-tmux -d 35% --preview 'echo ❯ git checkout -b tag/{} refs/tags/{}' --preview-window down:1 --ansi --reverse --prompt='git checkout -b tag/tagname tag/' | tr -d ' \\*' | sed -e 's/remotes\\/origin\\///' | xargs -n 1 -Itagname git checkout -b tag/tagname refs/tags/tagname;\
     };f"
     cf = "!f () {\
         git status | grep modified: | sed -e 's/\tmodified:   //' | fzf-tmux -d 35% --preview 'echo ❯ git checkout {}' --preview-window down:1 --ansi --reverse --prompt='git checkout ' | tr -d ' \\*' | xargs -n 1 git checkout;\
@@ -42,3 +46,4 @@
     };f"
 [ghq]
 	root = /Users/atsushi/workspace
+
