@@ -1,41 +1,39 @@
 
-# tap repositories and their packages
-
-tap argon/mas
-brew mas
-
+# tap repositories
 tap caskroom/cask
+tap caskroom/fonts
+tap cloudfoundry/tap
+tap homebrew/binary
+tap homebrew/boneyard
+tap homebrew/bundle
+tap homebrew/core
+tap homebrew/dupes
+tap homebrew/versions
+tap kylef/formulae
+tap rcmdnk/file
+tap sanemat/font
+tap vapor/tap
+tap atsushi130/tap
+
+# cask installed applications
 cask alcatraz
 cask font-fira-code
 cask intellij-idea
 cask webstorm
-cask phpstorm
-cask pycharm
 cask appcode
 cask datagrip
+cask rubymine
 cask clion
 cask hyper
-cask opera-neon
-cask clipy
 cask visual-studio-code
 cask swiftybeaver
 cask realm-browser
-cask karabiner
 cask vivaldi
-cask haskell-platform
+cask atom
+cask ngrok
 
-tap caskroom/fonts
-
-tap cloudfoundry/tap
+# brew installed applications
 brew cf-cli
-
-tap homebrew/binary
-
-tap homebrew/boneyard
-
-tap homebrew/bundle
-
-tap homebrew/core
 brew node
 brew sqlite
 brew typesafe-activator
@@ -58,6 +56,14 @@ brew pcre
 brew gobject-introspection
 brew oniguruma
 brew carthage
+brew ghq
+brew atsushi130/tap/kube
+brew atsushi130/tap/dot
+brew ffmpeg
+brew kubernetes-helm
+brew tig
+brew anyenv
+brew license-plist
 brew lua
 brew wget
 brew gettext
@@ -74,6 +80,7 @@ brew glib
 brew freetype
 brew python
 brew jq
+brew bitrise
 brew graphite2
 brew the_silver_searcher
 brew swiftlint
@@ -101,29 +108,7 @@ brew libuv
 brew pkg-config
 brew ghc
 brew cabal-install
-
-tap homebrew/dupes
-
-tap homebrew/versions
-
-tap kylef/formulae
 brew swiftenv
-
-tap rcmdnk/file
 brew brew-file
-
-tap sanemat/font
-
-tap vapor/tap
 brew ctls
 brew vapor
-
-# App Store applications
-appstore 682658836 GarageBand (10.1.2)
-appstore 408981434 iMovie (10.1.2)
-appstore 409183694 Keynote (6.6.2)
-appstore 409203825 Numbers (3.6.2)
-appstore 409201541 Pages (5.6.2)
-appstore 844918735 PicGIF Lite (2.0.8)
-appstore 1191209926 Vaunt (1.2)
-appstore 497799835 Xcode (8.3.3)
