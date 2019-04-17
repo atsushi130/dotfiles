@@ -30,6 +30,7 @@ cask "ngrok"
 cask "adobe-creative-cloud"
 
 # brew installed applications
+brew "hub"
 brew "cf-cli"
 brew "node"
 brew "sqlite"
