@@ -27,6 +27,7 @@ cask "realm-browser"
 cask "vivaldi"
 cask "atom"
 cask "ngrok"
+cask "adobe-creative-cloud"
 
 # brew installed applications
 brew "cf-cli"
