@@ -25,7 +25,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="$(anyenv root)/bin:$PATH"
 eval "$(anyenv init -)"
 
 # swiftenv
