@@ -50,3 +50,7 @@ export HOMEBREW_GITHUB_API_TOKEN="set Github API token"
 
 # gcloud
 export PATH=~/.gcloud/bin:$PATH
+
+# go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
