@@ -30,6 +30,7 @@ cask "realm-browser"
 cask "vivaldi"
 cask "atom"
 cask "ngrok"
+cask "jetbrains-toolbox"
 cask "adobe-creative-cloud"
 
 # brew installed applications
