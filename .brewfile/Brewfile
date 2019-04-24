@@ -13,6 +13,7 @@ tap "atsushi130/tap"
 
 # cask installed applications
 cask "alcatraz"
+cask "near-lock"
 cask "notion"
 cask "alfred"
 cask "font-fira-code"
