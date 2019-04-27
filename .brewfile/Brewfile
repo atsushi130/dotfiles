@@ -13,6 +13,8 @@ tap "atsushi130/tap"
 
 # cask installed applications
 cask "alcatraz"
+cask "near-lock"
+cask "notion"
 cask "alfred"
 cask "font-fira-code"
 cask "intellij-idea"
@@ -28,6 +30,7 @@ cask "realm-browser"
 cask "vivaldi"
 cask "atom"
 cask "ngrok"
+cask "jetbrains-toolbox"
 cask "adobe-creative-cloud"
 
 # brew installed applications
