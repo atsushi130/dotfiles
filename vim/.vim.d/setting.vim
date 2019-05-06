@@ -1,16 +1,16 @@
 " 行番号表示
 set number
 
-" tab をスペース 4つに設定
+" tab をスペース 4つに設定
 set tabstop=4
 
-" 前行に合わせてインデント
+" 前行に合わせてインデント
 set autoindent
 
-" タブの代わりにスペース
+" タブの代わりにスペース
 set expandtab
 
-" インデント幅
+" インデント幅
 set shiftwidth=4
 
 " 256色対応
@@ -22,7 +22,7 @@ set noswapfile
 " 不可視文字を非表示
 set nolist
 
-" 全角記号（○、□等）の位置ズレ対応
+" 全角記号（○、□等）の位置ズレ対応
 set ambiwidth=double
 
 " 折り返し有り
@@ -34,10 +34,10 @@ set wrap
 " テキストの最大幅を無効にする
 set textwidth=0
 
-" 左右スクロールは 1文字ずつ行う
+" 左右スクロールは 1文字ずつ行う
 set sidescroll=1
 
-" 矩形選択でカーソル位置の制限を解除
+" 矩形選択でカーソル位置の制限を解除
 set virtualedit+=block
 
 " lightline 表示
@@ -52,32 +52,33 @@ set lazyredraw
 " カレント行を強調
 set cursorline
 
-" カーソルが何行目の何列目に置かれているかを表示する
+" カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 
-" クリップボードにコピー
+" クリップボードにコピー
 set clipboard=unnamed,autoselect
 
-"ビープ音すべてを無効にする
+"ビープ音すべてを無効にする
 set visualbell t_vb=
 
-"エラーメッセージの表示時にビープを鳴らさない
+"エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells
 
-" Delete キー入力時に 制御文字が入力される現象の対応
+" Delete キー入力時に 制御文字が入力される現象の対応
 set backspace=indent,eol,start
 
 "補完辞書の設定
 autocmd FileType javascript :set dictionary=javascript.dict<CR>
 autocmd FileType php :set dictionary=PHP.dict<CR>
+autocmd FileType sh syn keyword vim
 
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.scss set filetype=sass
 
-" ファイルタイプ別プラグイン・インデントのロードを on
+" ファイルタイプ別プラグイン・インデントのロードを on
 filetype plugin indent on
 
-" 自動 paste モード
+" 自動 paste モード
 if &term =~ "xterm"
     let &t_ti .= "\e[?2004h"
     let &t_te .= "\e[?2004l"
@@ -93,3 +94,4 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[200~ <nop>
     cnoremap <special> <Esc>[201~ <nop>
 endif
+

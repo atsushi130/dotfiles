@@ -18,7 +18,7 @@ alias realm="~/.realm/start-object-server.command"
 alias gtop="~/.gtop/bin/gtop"
 alias derived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 alias github="hub browse"
-alias restart="(exec $SHELL -l)"
+alias refresh="(exec $SHELL -l)"
 
 alias simdoc="simulator_documents"
 function simulator_documents() {
@@ -292,3 +292,4 @@ function mkdir+cd() {
 	#ban recursion method call
 	command mkdir $1 && cd $1 && ls;
 }
+
