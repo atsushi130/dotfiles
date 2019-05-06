@@ -70,9 +70,6 @@
     # iterm
     cp -f  ~/.iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist.backup
 
-    # alfred
-    cp -rf ~/.alfred/Alfred.alfredpreferences   ~/.alfred/Alfred.alfredpreferences.backup
-
     # jetbrains
     cp -f  ~/Library/Preferences/IntelliJIdea*/templates/java.xml     ~/Library/Preferences/IntelliJIdea*/templates/java.xml.backup
     cp -f  ~/Library/Preferences/IntelliJIdea*/colors/JavaDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/JavaDusk.icls.backup
@@ -130,9 +127,6 @@
 
     # iterm
     cp -f  ./iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
-
-    # alfred
-    cp -rf ./alfred/Alfred.alfredpreferences   ~/.alfred
 
     # jetbrains
     cp -f  ./jetbrains/snippets/java.xml       ~/Library/Preferences/IntelliJIdea*/templates/java.xml
