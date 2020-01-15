@@ -33,6 +33,9 @@ export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"
 
+# nodenv
+export PATH="~/.anyenv/envs/nodenv/bin:$PATH"
+
 # nodebrew
 export PATH=~/.nodebrew/current/bin:$PATH
 
@@ -40,7 +43,7 @@ export PATH=~/.nodebrew/current/bin:$PATH
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 # ignoregen
-export PATH=~/.ignoregen/bin:$PATH
+export PATH=~/.cargo/bin:$PATH
 
 # gactions
 export PATH=~/.gactions/bin:$PATH
@@ -52,5 +55,6 @@ export HOMEBREW_GITHUB_API_TOKEN="set Github API token"
 export PATH=~/.gcloud/bin:$PATH
 
 # go
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
+export PATH=$GOROOT/bin:$PATH
