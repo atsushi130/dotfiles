@@ -70,7 +70,7 @@ set backspace=indent,eol,start
 "補完辞書の設定
 autocmd FileType javascript :set dictionary=javascript.dict<CR>
 autocmd FileType php :set dictionary=PHP.dict<CR>
-autocmd FileType sh syn keyword vim
+" autocmd FileType sh syn keyword vim
 
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 autocmd BufRead,BufNewFile *.scss set filetype=sass

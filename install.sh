@@ -137,6 +137,9 @@
 
     # atom
     cp -f  ./atom/keymap.cson ~/.atom/keymap.cson
+
+    # brewfile
+    cp -f  ./brew/Brewfile  ~/.brewfile/Brewfile
 }
 
 : "Clone repository" && {
@@ -168,6 +171,12 @@
 
     # plugin install
     source ~/.zshrc
+}
+
+: "Setup prezto" && {
+
+    # install prezto
+    ./zsh/prezto.install.sh
 }
 
 : "After" && {
