@@ -3,3 +3,24 @@ tags
 .DS_Store
 *.swp
 alfred/Alfred.alfredpreferences/preferences/features/websearch/prefs.plist
+
+# Modern IDE and editors (2026)
+.vscode/
+.fleet/
+*.code-workspace
+
+# Language specific
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cargo/
+target/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.direnv/
+
