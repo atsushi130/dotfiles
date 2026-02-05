@@ -35,7 +35,7 @@
     p = push -u origin
     d = diff
     pi = "!f () {\
-        gh pr list | fzf-tmux -d 35% --preview 'echo ❯ open pull request {}' --preview-window down:1 --ansi --reverse --prompt='open pull request ' | awk '{print $1}' | xargs -I{} gh pr view {} --web;\
+        gh pr list | fzf-tmux -d 35% --preview 'echo ❯ open pull request {}' --preview-window down:1 --ansi --reverse --prompt='open pull request ' | awk '{print $1}' | sed 's/#//' | xargs -I{} gh pr view {} --web;\
     };f"
     clear = "!f () {\
         git cleanup > /dev/null;\

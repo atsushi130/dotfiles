@@ -293,6 +293,7 @@ function mkdir+cd() {
 
 # Modern tool aliases (2026)
 # Use modern alternatives for common commands
+# Note: These override standard commands. Use 'command ls' in scripts if needed.
 if command -v exa >/dev/null 2>&1; then
     alias ls='exa'
     alias ll='exa -la'
