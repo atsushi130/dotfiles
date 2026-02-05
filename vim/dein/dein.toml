@@ -2,15 +2,11 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# 補完
+# 補完 - Modern LSP-based completion
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-
-# 補完
-[[plugins]]
-repo = 'Shougo/neocomplcache'
-on_i = 1
-hook_add = 'source ~/.vim/dein/plugins/neocomplcache.vim'
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+hook_add = 'source ~/.vim/dein/plugins/coc.vim'
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -28,10 +24,10 @@ hook_add = 'source ~/.vim/dein/plugins/neosnippet.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
-# ディレクトリツリー表示
+# ディレクトリツリー表示 - Modern alternative
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = 'source ~/.vim/dein/plugins/nerdtree.vim'
+repo = 'nvim-tree/nvim-tree.lua'
+hook_add = 'source ~/.vim/dein/plugins/nvim-tree.vim'
 
 # ステータスバーの表示
 [[plugins]]
@@ -39,36 +35,28 @@ repo = 'atsushi130/lightline.vim'
 rev  = 'master'
 hook_add = 'source ~/.vim/dein/plugins/lightline.vim'
 
-# 構文チェックプラグイン
+# Linting and fixing - Modern alternative to syntastic
 [[plugins]]
-repo = 'scrooloose/syntastic'
-hook_add = 'source ~/.vim/dein/plugins/syntastic.vim'
+repo = 'dense-analysis/ale'
+hook_add = 'source ~/.vim/dein/plugins/ale.vim'
 
 # 閉じ括弧の自動挿入
 [[plugins]]
 repo = 'kana/vim-smartinput'
 
-# ES6 のシンタックスハイライト
+# JavaScript/TypeScript support
 [[plugins]]
 repo = 'pangloss/vim-javascript'
 
-# JSX のシンタックスハイライト
 [[plugins]]
-repo = 'mxw/vim-jsx'
+repo = 'maxmellon/vim-jsx-pretty'
 
 [[plugins]]
-repo = 'jason0x43/vim-js-indent'
-on_ft = ['javascript', 'typescript', 'html']
-hook_add = 'source ~/.vim/dein/plugins/vim-js-indent.vim'
-
-# TypeScript のファイルタイプ検出
 repo = 'leafgarland/typescript-vim'
 on_ft = 'typescript'
 
-# TypeScript のシンタックスチェック
 [[plugins]]
-repo = 'Quramy/tsuquyomi'
-hook_add = 'source ~/.vim/dein/plugins/tsuquyomi.vim'
+repo = 'peitalin/vim-jsx-typescript'
 
 # Rust のシンタックスチェック
 [[plugins]]
@@ -77,11 +65,11 @@ hook_add = 'source ~/.vim/dein/plugins/rust.vim'
 
 # tags自動更新
 [[plugins]]
-repo = 'szw/vim-tags'
+repo = 'ludovicchabant/vim-gutentags'
 
 # tagbar メソッドリスト
 [[plugins]]
-repo = 'majutsushi/tagbar'
+repo = 'preservim/tagbar'
 hook_add = 'source ~/.vim/dein/plugins/tagbar.vim'
 
 # 異なるエディタで設定を共有
@@ -95,18 +83,23 @@ hook_add = 'source ~/.vim/dein/plugins/vim-markdown.vim'
 
 # Markdown プレビュー
 [[plugins]]
-repo = 'kannokanno/previm'
-hook_add = 'source ~/.vim/dein/plugins/previm.vim'
+repo = 'iamcco/markdown-preview.nvim'
+hook_add = 'source ~/.vim/dein/plugins/markdown-preview.vim'
 
 # ブラウザ自動同期
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
-# 置換いい感じ
+# Git integration
 [[plugins]]
-repo = 'osyo-manga/vim-over'
-hook_add = 'source ~/.vim/dein/plugins/vim-over.vim'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'vim-scripts/dbext.vim'
-hook_add = 'source ~/.vim/dein/plugins/dbext.vim'
+repo = 'airblade/vim-gitgutter'
+
+# Modern colorschemes
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'folke/tokyonight.nvim'

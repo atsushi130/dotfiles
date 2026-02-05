@@ -3,9 +3,6 @@
 # npm
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-# atom
-export PATH=$PATH:/usr/local/bin/atom
-
 JDK_16=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 JDK_17=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
 JDK_18=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
@@ -42,7 +39,7 @@ export PATH=~/.nodebrew/current/bin:$PATH
 # fastlane installed by homebrew cask
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-# ignoregen
+# cargo (Rust)
 export PATH=~/.cargo/bin:$PATH
 
 # gactions
@@ -58,3 +55,13 @@ export PATH=~/.gcloud/bin:$PATH
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 export PATH=$GOROOT/bin:$PATH
+
+# Modern tools (2026)
+# starship prompt
+eval "$(starship init zsh)"
+
+# zoxide (better cd)
+eval "$(zoxide init zsh)"
+
+# direnv
+eval "$(direnv hook zsh)"
