@@ -6,6 +6,22 @@
     editor = vim -c \"set fenc=utf-8\"
     quotepath = false
     filemode = false
+    # Use delta for better diffs
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    light = false
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[pull]
+    rebase = true
+[init]
+    defaultBranch = main
 [alias]
     tree = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     develop = checkout develop
@@ -19,7 +35,7 @@
     p = push -u origin
     d = diff
     pi = "!f () {\
-        hub pr list | fzf-tmux -d 35% --preview 'echo ❯ open pull request {}' --preview-window down:1 --ansi --reverse --prompt='open pull request ' | awk '{print $1}' | tr -d \"#\" | xargs -Ino open https://github.com/bank/cash-ios/pull/no;\
+        gh pr list | fzf-tmux -d 35% --preview 'echo ❯ open pull request {}' --preview-window down:1 --ansi --reverse --prompt='open pull request ' | awk '{print $1}' | xargs -Ino gh pr view no --web;\
     };f"
     clear = "!f () {\
         git cleanup > /dev/null;\

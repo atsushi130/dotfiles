@@ -35,9 +35,31 @@ indent_size = 2
 
 [*.hs]
 
-[*.{scss, css}]
+[*.{scss,css}]
 indent_size = 2
 
 [*.java]
 
 [*.cr]
+
+# Modern languages/frameworks (2026)
+[*.{js,jsx,ts,tsx,vue}]
+indent_size = 2
+
+[*.{json,yaml,yml}]
+indent_size = 2
+
+[*.go]
+indent_style = tab
+
+[*.py]
+indent_size = 4
+
+[*.rb]
+indent_size = 2
+
+[*.toml]
+indent_size = 2
+
+[Makefile]
+indent_style = tab

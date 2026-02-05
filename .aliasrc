@@ -6,18 +6,16 @@ alias svim="sudo vim -u ~/.vimrc"
 alias home="cd ~/"
 
 alias vimrc="vim ~/.vimrc"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
 alias dein="vim ~/.vim/dein/dein.toml"
 alias xvimrc="vim ~/.xvimrc"
 alias ideavimrc="vim ~/.ideavimrc"
 alias zshrc="vim ~/.zshrc"
 alias aliasrc="vim ~/.aliasrc"
 alias tmux-conf="vim ~/.tmux.conf"
-alias hyper="vim ~/.hyper.js"
 alias program="cd ~/program"
-alias realm="~/.realm/start-object-server.command"
-alias gtop="~/.gtop/bin/gtop"
 alias derived="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
-alias github="hub browse"
+alias github="gh browse"
 alias refresh="(exec $SHELL -l)"
 
 alias simdoc="simulator_documents"
@@ -165,15 +163,15 @@ docker-ls() {
 }
 
 # launch Vivaldi
-alias Vivaldi="open -a /Applications/Vivaldi.app"
-vivaldi() {
+alias Arc="open -a /Applications/Arc.app"
+arc() {
 	local str opt
 	. ~/.dict/url.dict
 
 	count=1
 	for service in $services; do
 		if [ $1 = $service ]; then
-			Vivaldi $urls[$count]
+			Arc $urls[$count]
 			return
 		fi
 		count=$(($count + 1))
@@ -192,12 +190,12 @@ vivaldi() {
 			opt="search?num=100"
 			opt="${opt}&q=${str}"
 		fi
-		Vivaldi http://www.google.co.jp/$opt
+		Arc http://www.google.co.jp/$opt
 
 	elif [ $1 = "-f" ]; then
-		Vivaldi $2
+		Arc $2
 	elif [ $1 = "-u" ]; then
-		Vivaldi $2
+		Arc $2
 	else
 		echo "option "$1" not found."
     fi
@@ -292,4 +290,29 @@ function mkdir+cd() {
 	#ban recursion method call
 	command mkdir $1 && cd $1 && ls;
 }
+
+# Modern tool aliases (2026)
+# Use modern alternatives for common commands
+if command -v exa >/dev/null 2>&1; then
+    alias ls='exa'
+    alias ll='exa -la'
+    alias tree='exa --tree'
+fi
+
+if command -v bat >/dev/null 2>&1; then
+    alias cat='bat'
+fi
+
+if command -v ripgrep >/dev/null 2>&1; then
+    alias grep='rg'
+fi
+
+if command -v fd >/dev/null 2>&1; then
+    alias find='fd'
+fi
+
+# Git using gh instead of hub
+alias git-pr='gh pr create'
+alias git-browse='gh browse'
+alias git-issues='gh issue list'
 

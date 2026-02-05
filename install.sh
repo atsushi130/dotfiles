@@ -1,19 +1,18 @@
 #!/bin/bash
 
 : "Make directory" && {
-    mkdir ~/.iterm
-    mkdir ~/.alfred
-    mkdir ~/.vim
-    mkdir ~/.vim/dictionary
-    mkdir ~/.vim/colors
-    mkdir ~/.vim/dein
-    mkdir ~/.config
-    mkdir ~/.vim.d
-    mkdir ~/.zsh.d
-    mkdir ~/.sshrc.d
-    mkdir ~/.realm
-    mkdir ~/.brewfile
-    mkdir ~/.atom
+    mkdir -p ~/.iterm
+    mkdir -p ~/.alfred
+    mkdir -p ~/.vim
+    mkdir -p ~/.vim/dictionary
+    mkdir -p ~/.vim/colors
+    mkdir -p ~/.vim/dein
+    mkdir -p ~/.config
+    mkdir -p ~/.config/nvim
+    mkdir -p ~/.vim.d
+    mkdir -p ~/.zsh.d
+    mkdir -p ~/.sshrc.d
+    mkdir -p ~/.brewfile
 }
 
 : "Backup" && {
@@ -55,9 +54,6 @@
 
     # brewfile
     cp -rf ~/.brewfile                ~/.brewfile.backup
-
-    # atom
-    cp -rf ~/.atom                    ~/.atom.backup
 
     # pet
     cp -f  ~/.config/pet/config.toml  ~/.config/pet/config.toml.backup
@@ -134,9 +130,6 @@
     cp -f  ./jetbrains/colors/ScalaDusk.icls   ~/Library/Preferences/IntelliJIdea*/colors/ScalaDusk.icls
     cp -f  ./jetbrains/colors/KotlinDusk.icls  ~/Library/Preferences/IntelliJIdea*/colors/KotlinDusk.icls
     cp -f  ./jetbrains/colors/RustDusk.icls    ~/Library/Preferences/IntelliJIdea*/colors/RustDusk.icls
-
-    # atom
-    cp -f  ./atom/keymap.cson ~/.atom/keymap.cson
 
     # brewfile
     cp -f  ./brew/Brewfile  ~/.brewfile/Brewfile
